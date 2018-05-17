@@ -4,7 +4,7 @@
   "description": "MyQ Archive jobs parser for Windows, Linux and Mac OS X",
   "main": "index.html",
   "scripts": {
-    "start": "npm run transpile && nw ./transpiled/",
+    "start": "npm run transpile && nw ./transpiled",
     "build": "npm run cleanBuildFolder && echo \"TODO\"",
     "cleanTranspiledFolder": "rimraf transpiled/*",
     "cleanBuildFolder": "rimraf build/*",
@@ -31,10 +31,13 @@
   "dependencies": {
     "nw": "^0.30.2",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "copyfiles": "^2.0.0",
