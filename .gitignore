@@ -57,3 +57,12 @@ typings/
 # dotenv environment variables file
 .env
 
+# Root folder Archived Jobs
+__data__/
+
+# Project folders
+transpiled/*
+!transpiled/.keep
+
+build/*
+!build/.keep

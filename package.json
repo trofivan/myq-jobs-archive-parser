@@ -1,0 +1,43 @@
+{
+  "name": "myq-jobs-archive-parser",
+  "version": "1.0.0",
+  "description": "MyQ Archive jobs parser for Windows, Linux and Mac OS X",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run transpile && nw ./transpiled/",
+    "build": "npm run cleanBuildFolder && echo \"TODO\"",
+    "cleanTranspiledFolder": "rimraf transpiled/*",
+    "cleanBuildFolder": "rimraf build/*",
+    "copyEntryPoint": "copyfiles -f ./src/*.html ./src/*.json transpiled",
+    "transpile": "npm run cleanTranspiledFolder && npm run copyEntryPoint && babel src -d transpiled",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trofivan/myq-jobs-archive-parser.git"
+  },
+  "keywords": [
+    "MyQ",
+    "XML",
+    "jobs",
+    "parser"
+  ],
+  "author": "Ivan Trofimov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trofivan/myq-jobs-archive-parser/issues"
+  },
+  "homepage": "https://github.com/trofivan/myq-jobs-archive-parser#readme",
+  "dependencies": {
+    "nw": "^0.30.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "copyfiles": "^2.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
