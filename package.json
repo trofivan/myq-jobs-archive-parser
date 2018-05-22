@@ -2,26 +2,25 @@
   "name": "myq-jobs-archive-parser",
   "version": "1.0.0",
   "description": "MyQ Archive jobs parser for Windows, Linux and Mac OS X",
-  "main": "index.html",
+  "private": true,
+  "main": "build/index.html",
+  "chromium-args": "--mixed-context --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
+  "window": {
+    "min_width": 800,
+    "min_height": 600,
+    "position": "center"
+  },
   "scripts": {
-    "start": "npm run transpile && nw ./transpiled",
-    "build": "npm run cleanBuildFolder && echo \"TODO\"",
-    "cleanTranspiledFolder": "rimraf transpiled/*",
-    "cleanBuildFolder": "rimraf build/*",
-    "copyEntryPoint": "copyfiles -f ./src/*.html ./src/*.json transpiled",
-    "transpile": "npm run cleanTranspiledFolder && npm run copyEntryPoint && babel src -d transpiled",
+    "start": "npm run build.dev && run .",
+    "build.dev": "webpack --mode=development",
+    "build.prod": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trofivan/myq-jobs-archive-parser.git"
   },
-  "keywords": [
-    "MyQ",
-    "XML",
-    "jobs",
-    "parser"
-  ],
+  "keywords": ["MyQ", "XML", "jobs", "parser"],
   "author": "Ivan Trofimov",
   "license": "MIT",
   "bugs": {
@@ -29,7 +28,7 @@
   },
   "homepage": "https://github.com/trofivan/myq-jobs-archive-parser#readme",
   "dependencies": {
-    "nw": "^0.30.2",
+    "antd": "^3.5.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -37,10 +36,20 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.7.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "copyfiles": "^2.0.0",
-    "rimraf": "^2.6.2"
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "less-vars-to-js": "^1.2.1",
+    "nwjs-builder-phoenix": "^1.14.6",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
   }
 }

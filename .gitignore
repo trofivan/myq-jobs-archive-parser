@@ -64,5 +64,4 @@ __data__/
 transpiled/*
 !transpiled/.keep
 
-build/*
-!build/.keep
+build/*.js

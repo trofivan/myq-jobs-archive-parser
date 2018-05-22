@@ -1,8 +1,0 @@
-{
-  "name": "myq-jobs-archive-parser",
-  "main": "index.html",
-  "window": {
-    "width": 800,
-    "height": 600
-  }
-}
