@@ -1,2 +1,2 @@
-# myq-jobs-archive-parser
-MyQ Archive jobs parser for Windows, Linux and Mac OS X
+# MyQ Jobs Archive Parser
+MyQ Jobs Archive Parser for Windows, Linux and Mac OS X

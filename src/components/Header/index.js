@@ -1,59 +1,46 @@
 import React from 'react';
-import { Row, Col, Form, Input, Checkbox, Select, DatePicker } from 'antd';
-import moment from 'moment';
+import { Row, Col } from 'antd';
 
-const styleRow = {
-  padding: '16px 0'
-};
+import FolderChooser from './FolderChooser';
+import JobsTypeSelector from './JobsTypeSelector';
+import LocaleSelector from './LocaleSelector';
+import UsersSelector from './UsersSelector';
+import DateRangeSelector from './DateRangeSelector';
 
-const Header = () => (
-  <Row style={styleRow}>
-    <Col span={22} offset={1}>
-      <Form layout="inline">
-        <Form.Item>
-          <Input type="file" nwdirectory="true" />
-        </Form.Item>
-        <Form.Item>
-          <Checkbox.Group
-            options={[
-              { label: 'Print', value: 'print' },
-              { label: 'Scan', value: 'scan' },
-              { label: 'Copy', value: 'copy' }
-            ]}
-            defaultValue={['print', 'scan', 'copy']}
-          />
-        </Form.Item>
-        <Form.Item>
-          <Select
-            showSearch
-            style={{ width: 160 }}
-            placeholder="Username"
-            optionFilterProp="children"
-            allowClear
-            filterOption={(input, option) =>
-              option.props.children
-                .toLowerCase()
-                .indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            <Select.Option value="trofivan">trofivan</Select.Option>
-            <Select.Option value="trofiiva">trofiiva</Select.Option>
-            <Select.Option value="antm">antm</Select.Option>
-            <Select.Option value="korotand">korotand</Select.Option>
-          </Select>
-        </Form.Item>
-        <Form.Item>
-          <DatePicker.RangePicker
-            ranges={{
-              Today: [moment(), moment()],
-              'This Week': [moment().startOf('week'), moment().endOf('week')],
-              'This Month': [moment().startOf('month'), moment().endOf('month')]
-            }}
-          />
-        </Form.Item>
-      </Form>
-    </Col>
-  </Row>
+export default () => (
+  <div style={{ width: '100%', padding: '16px 4.166666667%' }}>
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        alignItems: 'center'
+      }}
+    >
+      <div>
+        <FolderChooser />
+      </div>
+      <div style={{ flexGrow: 1, padding: '0 16px' }}>
+        <DateRangeSelector />
+      </div>
+      <div>
+        <LocaleSelector />
+      </div>
+    </div>
+
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        paddingTop: 16,
+        alignItems: 'center'
+      }}
+    >
+      <div>
+        <JobsTypeSelector />
+      </div>
+      <div style={{ flexGrow: 1, paddingLeft: 16 }}>
+        <UsersSelector />
+      </div>
+    </div>
+  </div>
 );
-
-export default Header;

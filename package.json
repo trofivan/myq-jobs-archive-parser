@@ -4,8 +4,7 @@
   "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
-  "chromium-args":
-    "--mixed-context --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
+  "chromium-args": "--mixed-context --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
   "window": {
     "icon": "build/assets/icon.png",
     "min_width": 800,
@@ -22,7 +21,12 @@
     "type": "git",
     "url": "git+https://github.com/trofivan/myq-jobs-archive-parser.git"
   },
-  "keywords": ["MyQ", "XML", "jobs", "parser"],
+  "keywords": [
+    "MyQ",
+    "XML",
+    "jobs",
+    "parser"
+  ],
   "author": "Ivan Trofimov",
   "license": "MIT",
   "bugs": {
