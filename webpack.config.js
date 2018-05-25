@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['build'], {
-      exclude: ['index.html', '.keep']
+      exclude: ['index.html', '.keep', 'assets']
     })
   ],
   module: {

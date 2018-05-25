@@ -1,11 +1,13 @@
 {
   "name": "myq-jobs-archive-parser",
   "version": "1.0.0",
-  "description": "MyQ Archive jobs parser for Windows, Linux and Mac OS X",
+  "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
-  "chromium-args": "--mixed-context --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
+  "chromium-args":
+    "--mixed-context --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
   "window": {
+    "icon": "build/assets/icon.png",
     "min_width": 800,
     "min_height": 600,
     "position": "center"
