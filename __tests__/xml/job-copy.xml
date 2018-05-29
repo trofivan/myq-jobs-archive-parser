@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <timestamp>2017-01-30 15:42:51</timestamp>
+  <username>dlatek6p</username>
+  <jobType>copy</jobType>
+  <serverName>SRV-MYQ01.domain.local</serverName>
+  <serverVersion>6.2.4.27</serverVersion>
+  <printerAddr>102.85.96.219</printerAddr>
+  <files>
+    <file>job-2.pdf</file>
+  </files>
+</data>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <timestamp>2017-06-12 10:33:55</timestamp>
+  <username>mturone31</username>
+  <jobType>scan</jobType>
+  <serverName>SRV-MYQ01.domain.local</serverName>
+  <serverVersion>6.2.4.27</serverVersion>
+  <printerAddr>236.79.97.64</printerAddr>
+  <files>
+    <file>job-1.pdf</file>
+  </files>
+</data>

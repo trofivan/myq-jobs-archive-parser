@@ -1,25 +1,32 @@
 import React from 'react';
 import { Button, Icon } from 'antd';
 
-// React Ref to choose data path
-// React.createRef() API: https://reactjs.org/docs/refs-and-the-dom.html
 const chooseFolderRef = React.createRef();
+
+const handlerClick = e => {
+  chooseFolderRef.current.click();
+};
+
+const handlerChange = e => {
+  console.log(e.target.value);
+};
 
 export default () => (
   <div>
-    <Button type="primary" onClick={() => chooseFolderRef.current.click()}>
-      Select folder to parse <Icon type="upload" />
+    <Button type="primary" onClick={handlerClick}>
+      <Icon type="file-add" /> Select folder to parse
     </Button>
 
-    {/* Hidden input nwdirectory type for choose data folder over ref */}
+    {/* 
+      This trick allows to select a folder. 
+      More info: https://github.com/nwjs/nw.js/wiki/file-dialogs#why-not-provide-api-in-javascript   
+    */}
     <input
       type="file"
+      nwdirectory="true"
       style={{ display: 'none' }}
       ref={chooseFolderRef}
-      onChange={e => {
-        console.log(e.target.value);
-      }}
-      nwdirectory="true"
+      onChange={handlerChange}
     />
   </div>
 );

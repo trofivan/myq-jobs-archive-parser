@@ -1,6 +1,6 @@
 {
   "name": "myq-jobs-archive-parser",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
@@ -15,7 +15,7 @@
     "start": "npm run build.dev && run .",
     "build.dev": "webpack --mode=development",
     "build.prod": "webpack --mode=production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -38,11 +38,13 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-import": "^1.7.0",
     "babel-preset-env": "^1.7.0",
@@ -50,10 +52,12 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "jest": "^23.0.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "less-vars-to-js": "^1.2.1",
     "nwjs-builder-phoenix": "^1.14.6",
+    "regenerator-runtime": "^0.11.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"

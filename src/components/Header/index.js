@@ -7,15 +7,19 @@ import LocaleSelector from './LocaleSelector';
 import UsersSelector from './UsersSelector';
 import DateRangeSelector from './DateRangeSelector';
 
+const styleFlexContainer = {
+  display: 'flex',
+  width: '100%',
+  alignItems: 'center'
+};
+
+const FlexContainer = ({ children, style }) => (
+  <div style={{ ...styleFlexContainer, ...style }}>{children}</div>
+);
+
 export default () => (
   <div style={{ width: '100%', padding: '16px 4.166666667%' }}>
-    <div
-      style={{
-        display: 'flex',
-        width: '100%',
-        alignItems: 'center'
-      }}
-    >
+    <FlexContainer>
       <div>
         <FolderChooser />
       </div>
@@ -25,22 +29,15 @@ export default () => (
       <div>
         <LocaleSelector />
       </div>
-    </div>
+    </FlexContainer>
 
-    <div
-      style={{
-        display: 'flex',
-        width: '100%',
-        paddingTop: 16,
-        alignItems: 'center'
-      }}
-    >
+    <FlexContainer style={{ paddingTop: 16 }}>
       <div>
         <JobsTypeSelector />
       </div>
       <div style={{ flexGrow: 1, paddingLeft: 16 }}>
         <UsersSelector />
       </div>
-    </div>
+    </FlexContainer>
   </div>
 );
