@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <timestamp>2017-08-05 08:32:06</timestamp>
+  <username>mesp60</username>
+  <jobType>print</jobType>
+  <serverName>SRV-MYQ01.domain.local</serverName>
+  <serverVersion>6.2.4.27</serverVersion>
+  <printerAddr>53.201.154.38</printerAddr>
+  <files>
+    <file>job-0.pdf</file>
+  </files>
+</data>

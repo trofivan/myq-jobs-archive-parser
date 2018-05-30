@@ -7,7 +7,7 @@ const asyncPathParser = async url =>
       resolve(parsed);
     }, 200);
   });
-
+  
 test('Simple test: 1 + 2 + 3 equal 6', () => {
   const sum = 1 + 2 + 3;
 
