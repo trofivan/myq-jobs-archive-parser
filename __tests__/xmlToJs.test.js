@@ -1,5 +1,5 @@
 import path from 'path';
-import xmlToJs from '../src/services/xmlToJS';
+import xmlToJs from '../src/libs/xmlToJS';
 
 test('XML to JS test (copy)', async () => {
   expect.assertions(1);

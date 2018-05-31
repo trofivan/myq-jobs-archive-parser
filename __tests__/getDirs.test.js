@@ -1,11 +1,17 @@
 import path from 'path';
-import getDirs from '../src/services/getDirs';
+import getDirs from '../src/libs/getDirs';
+import getDirsSync from '../src/libs/getDirsSync';
+import getDirsRecursively from '../src/libs/getDirsRecursively';
+import getDirsRecursivelySync from '../src/libs/getDirsRecursivelySync';
 
-test('Get dirs recursively', () => {
-  //expect.assertions(1);
-
-  const result = [
-    //`${__dirname}/dirs`,
+const results = {
+  currentDir: [
+    `${__dirname}/dirs/dir_1`,
+    `${__dirname}/dirs/dir_2`,
+    `${__dirname}/dirs/dir_3`,
+    `${__dirname}/dirs/dir_4`
+  ],
+  recursively: [
     `${__dirname}/dirs/dir_1`,
     `${__dirname}/dirs/dir_1/subdir_1`,
     `${__dirname}/dirs/dir_1/subdir_2`,
@@ -22,16 +28,27 @@ test('Get dirs recursively', () => {
     `${__dirname}/dirs/dir_4/subdir_1`,
     `${__dirname}/dirs/dir_4/subdir_2`,
     `${__dirname}/dirs/dir_4/subdir_3`
-  ];
+  ]
+};
 
-  const rootDir = path.join(__dirname, 'dirs');
+const rootDir = path.join(__dirname, 'dirs');
+
+test('Asynchronous getting dirs from current dir', () => {
+  expect.assertions(1);
 
   return getDirs(rootDir).then(dirs => {
-    expect(dirs).toEqual(result);
+    expect(dirs).toEqual(results.currentDir);
   });
+});
 
-  //
-  // const dirs = await getDirs(rootDir);
+test('Synchronous getting dirs from current dir', () => {
+  const dirs = getDirsSync(rootDir);
 
-  // expect(dirs).toEqual(result);
+  expect(dirs).toEqual(results.currentDir);
+});
+
+test('Synchronous getting dirs recursively', () => {
+  const dirs = getDirsRecursivelySync(rootDir);
+
+  expect(dirs).toEqual(results.recursively);
 });
