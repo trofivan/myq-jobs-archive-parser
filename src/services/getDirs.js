@@ -4,18 +4,49 @@ import { promisify } from 'util';
 
 const [readDir, getStat] = [promisify(fs.readdir), promisify(fs.stat)];
 
-export default dir =>
-  readDir(dir)
-    .then(items => items.map(item => path.join(dir, item)))
-    .then(paths => {
-      const promises = paths.map(item => getStat(item));
-      return Promise.all(promises).then(stats =>
-        paths.filter((path, index) => stats[index].isDirectory())
-      );
-    })
-    .catch(e => {
-      throw new Error(e);
-    });
+export default dir => {
+  const getItemsPaths = items => items.map(item => path.join(dir, item));
+
+  const getStatPromisesFromPaths = paths =>
+    paths.map(item => ({ path: item, promise: getStat(item) }));
+
+  const getDirsPaths = list => {
+    const paths = list.map(item => item.path);
+    const promises = list.map(item => item.promise);
+
+    return Promise.all(promises).then(stats =>
+      paths.filter((item, index) => stats[index].isDirectory())
+    );
+  };
+
+  return new Promise((resolve, reject) => {
+    const result = readDir(dir)
+      .then(getItemsPaths)
+      .then(getStatPromisesFromPaths)
+      .then(getDirsPaths)
+      .catch(e => reject(e));
+
+    resolve(result);
+  });
+};
+
+// export default dir =>
+//   readDir(dir).then(items => {
+//     const paths = items.map(item => path.join(dir, item));
+
+//   });
+
+// readDir(dir)
+//   .then(items => items.map(item => path.join(dir, item)))
+//   .then(paths => {
+//     return new Promise((resolve, reject) => {
+//       const promises = paths.map(item => getStat(item));
+//       const result = Promise.all(promises).then(stats =>
+//         paths.filter((path, index) => stats[index].isDirectory())
+//       );
+//       resolve(result);
+//     });
+//   });
 
 // export default async dir => {
 //   const items = await readDir(dir);

@@ -1,7 +1,7 @@
 import path from 'path';
 import getDirs from '../src/services/getDirs';
 
-test('Get dirs recursively', async () => {
+test('Get dirs recursively', () => {
   //expect.assertions(1);
 
   const result = [
@@ -25,7 +25,13 @@ test('Get dirs recursively', async () => {
   ];
 
   const rootDir = path.join(__dirname, 'dirs');
-  const dirs = await getDirs(rootDir);
 
-  expect(dirs).toEqual(result);
+  return getDirs(rootDir).then(dirs => {
+    expect(dirs).toEqual(result);
+  });
+
+  //
+  // const dirs = await getDirs(rootDir);
+
+  // expect(dirs).toEqual(result);
 });
