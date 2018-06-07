@@ -47,6 +47,14 @@ test('Synchronous getting dirs from current dir', () => {
   expect(dirs).toEqual(results.currentDir);
 });
 
+test('Asynchronous getting dirs recursively', () => {
+  expect.assertions(1);
+
+  return getDirsRecursively(rootDir).then(dirs => {
+    expect(dirs).toEqual(results.recursively);
+  });
+});
+
 test('Synchronous getting dirs recursively', () => {
   const dirs = getDirsRecursivelySync(rootDir);
 

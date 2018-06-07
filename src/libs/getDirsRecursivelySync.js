@@ -1,25 +1,19 @@
-import fs from 'fs';
-import path from 'path';
 import getDirsSync from '../libs/getDirsSync';
 
-const getDirsRecursivelySync = dir =>
-  getDirsSync(dir).reduce(
-    (acc, current) => [...acc, current, ...getDirsRecursivelySync(current)],
-    []
-  );
+const getDirsRecursivelySync = dir => {
+  // Tail call optimization
+  const iter = (acc = [], current) => {
+    const dirs = getDirsSync(current);
 
-// const getDirsRecursivelySync = dir => {
-//   const iter = (acc = [], current) => {
-//     const dirs = getDirsSync(dir);
+    return dirs.length === 0
+      ? acc
+      : dirs.reduce(
+          (rAcc, rCurrent) => iter([...rAcc, rCurrent], rCurrent),
+          acc
+        );
+  };
 
-//     if (dirs.length) {
-      
-//     }
-
-//     return acc;
-//   };
-
-//   return iter([], dir);
-// };
+  return iter([], dir);
+};
 
 export default getDirsRecursivelySync;
