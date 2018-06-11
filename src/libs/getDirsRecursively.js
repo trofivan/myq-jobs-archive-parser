@@ -6,7 +6,7 @@ const iter = async (acc = [], current) => {
   return dirs.length === 0
     ? acc
     : dirs.reduce(
-        async (rAcc, rDir) => iter([...(await rAcc), rDir], rDir),
+        async (prevPromise, dir) => iter([...(await prevPromise), dir], dir),
         acc
       );
 };
