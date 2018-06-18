@@ -6,30 +6,31 @@ import getDirsRecursivelySync from '../src/libs/getDirsRecursivelySync';
 
 const results = {
   currentDir: [
-    `${__dirname}/dirs/dir_1`,
-    `${__dirname}/dirs/dir_2`,
-    `${__dirname}/dirs/dir_3`,
-    `${__dirname}/dirs/dir_4`
+    path.join(__dirname, 'dirs', 'dir_1'),
+    path.join(__dirname, 'dirs', 'dir_2'),
+    path.join(__dirname, 'dirs', 'dir_3'),
+    path.join(__dirname, 'dirs', 'dir_4')
   ],
   recursively: [
-    `${__dirname}/dirs/dir_1`,
-    `${__dirname}/dirs/dir_1/subdir_1`,
-    `${__dirname}/dirs/dir_1/subdir_2`,
-    `${__dirname}/dirs/dir_1/subdir_3`,
-    `${__dirname}/dirs/dir_2`,
-    `${__dirname}/dirs/dir_2/subdir_1`,
-    `${__dirname}/dirs/dir_2/subdir_2`,
-    `${__dirname}/dirs/dir_2/subdir_3`,
-    `${__dirname}/dirs/dir_3`,
-    `${__dirname}/dirs/dir_3/subdir_1`,
-    `${__dirname}/dirs/dir_3/subdir_2`,
-    `${__dirname}/dirs/dir_3/subdir_3`,
-    `${__dirname}/dirs/dir_4`,
-    `${__dirname}/dirs/dir_4/subdir_1`,
-    `${__dirname}/dirs/dir_4/subdir_2`,
-    `${__dirname}/dirs/dir_4/subdir_3`
+    path.join(__dirname, 'dirs', 'dir_1'),
+    path.join(__dirname, 'dirs', 'dir_1', 'subdir_1'),
+    path.join(__dirname, 'dirs', 'dir_1', 'subdir_2'),
+    path.join(__dirname, 'dirs', 'dir_1', 'subdir_3'),
+    path.join(__dirname, 'dirs', 'dir_2'),
+    path.join(__dirname, 'dirs', 'dir_2', 'subdir_1'),
+    path.join(__dirname, 'dirs', 'dir_2', 'subdir_2'),
+    path.join(__dirname, 'dirs', 'dir_2', 'subdir_3'),
+    path.join(__dirname, 'dirs', 'dir_3'),
+    path.join(__dirname, 'dirs', 'dir_3', 'subdir_1'),
+    path.join(__dirname, 'dirs', 'dir_3', 'subdir_2'),
+    path.join(__dirname, 'dirs', 'dir_3', 'subdir_3'),
+    path.join(__dirname, 'dirs', 'dir_4'),
+    path.join(__dirname, 'dirs', 'dir_4', 'subdir_1'),
+    path.join(__dirname, 'dirs', 'dir_4', 'subdir_2'),
+    path.join(__dirname, 'dirs', 'dir_4', 'subdir_3')
   ]
 };
+
 
 const rootDir = path.join(__dirname, 'dirs');
 
