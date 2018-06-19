@@ -4,7 +4,7 @@ import { promisify } from 'util';
 
 import getDirsRecursively from './getDirsRecursively';
 
-const [readDir, getStat] = [promisify(fs.readdir), promisify(fs.stat)];
+const readDir = promisify(fs.readdir);
 
 const toFullPaths = (dirs, dirsContent) =>
   dirsContent.reduce((acc, dirContent, index) => {
