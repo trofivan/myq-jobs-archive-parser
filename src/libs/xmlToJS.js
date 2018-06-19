@@ -14,13 +14,3 @@ export default filePath =>
       .then(js => resolve(js))
       .catch(err => reject(err));
   });
-
-// export default async filePath => {
-//   try {
-//     const xml = await readFile(filePath);
-//     const js = await parseString(xml);
-//     return js;
-//   } catch (err) {
-//     throw new Error(err);
-//   }
-// };
