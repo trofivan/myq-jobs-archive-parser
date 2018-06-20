@@ -21,37 +21,31 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
       end: ''
     },
   },
-  jobsFolder: '/home/trofivan/Desktop/__data__',
+  jobsFolder: '/home/username/Desktop/__data__',
   jobs: [
     {
-      timeStamp: '2018-01-01 12:00:00',
-      username: 'trofivan',
-      jobType: 'print',
-      serverName: 'srv01.domain.local',
-      printerAddr: '10.100.10.17',
-      path: './2018-01-01-0001/',
-      xml: 'job-001.xml',
-      files: ['job-001.pdf']
-    },
-    {
-      timeStamp: '2018-01-01 12:05:00',
-      username: 'otheruser',
-      jobType: 'scan',
-      serverName: 'srv01.domain.local',
-      printerAddr: '10.100.10.19',
-      path: './2018-01-01-0001/',
-      xml: 'job-002.xml',
-      files: ['job-002.pdf']
-    },
-    {
-      timeStamp: '2018-01-01 13:00:00',
-      username: 'trofivan',
+      files: ['job-2.pdf'],
       jobType: 'copy',
-      serverName: 'srv01.domain.local',
-      printerAddr: '10.100.10.18',
-      path: './2018-01-01-0001/',
-      xml: 'job-003.xml',
-      files: ['job-003-0.pdf', 'job-003-1.pdf']
+      printerAddr: '102.85.96.219',
+      serverName: 'SRV-MYQ01.domain.local',
+      serverVersion: '6.2.4.27',
+      timestamp: '2017-01-30 15:42:51',
+      username: 'dlatek6p',
+      xmlFile: '/home/username/Desktop/__data__/dirs/job-copy.xml'
+    },
+    {
+      error: 'Non-whitespace before first tag.',
+      xmlFile: '/home/username/Desktop/__data__/dirs/job-invalid.xml'
+    },
+    {
+      files: ['job-0.pdf', 'job-1.pdf'],
+      jobType: 'print',
+      printerAddr: '53.201.154.38',
+      serverName: 'SRV-MYQ01.domain.local',
+      serverVersion: '6.2.4.27',
+      timestamp: '2017-08-05 08:32:06',
+      username: 'mesp60',
+      xmlFile: '/home/username/Desktop/__data__/dirs/job-print.xml')
     }
   ]
 }
