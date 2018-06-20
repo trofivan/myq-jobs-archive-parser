@@ -53,7 +53,7 @@ test('XML to JS test (print)', async () => {
 
   const resultPrint = {
     data: {
-      files: { file: 'job-0.pdf' },
+      files: { file: ['job-0.pdf', 'job-1.pdf'] },
       jobType: 'print',
       printerAddr: '53.201.154.38',
       serverName: 'SRV-MYQ01.domain.local',
@@ -77,11 +77,11 @@ test('XML to JS test (*.xml not found)', async () => {
 });
 
 test('XML to JS test (invalid *.xml file)', async () => {
-   expect.assertions(1);
+  expect.assertions(1);
   try {
     const xmlFake = path.join(__dirname, 'xml', 'job-invalid.xml');
     const jsFake = await xmlToJs(xmlFake);
-    console.log(jsFake)
+    console.log(jsFake);
   } catch (e) {
     expect(e.message).toMatch('Non-whitespace before first tag');
   }
