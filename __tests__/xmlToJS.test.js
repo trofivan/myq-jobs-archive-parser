@@ -53,7 +53,7 @@ test('XML to JS test (print)', async () => {
 
   const resultPrint = {
     data: {
-      files: { file: ['job-0.pdf', 'job-1.pdf'] },
+      files: { file: ['job-0.pdf', 'job-1.pdf', 'job-2.pdf'] },
       jobType: 'print',
       printerAddr: '53.201.154.38',
       serverName: 'SRV-MYQ01.domain.local',
