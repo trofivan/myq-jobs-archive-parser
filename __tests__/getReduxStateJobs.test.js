@@ -108,3 +108,12 @@ test('Getting *.xml jobs files array and convert it to the Redux state', async (
 
   expect(jobs).toEqual(result);
 });
+
+test('Getting *.xml jobs files array and convert it to the Redux state - empty folder', async () => {
+  expect.assertions(1);
+
+  const rootDir = path.join(__dirname, 'dirs', 'dir_3', 'subdir_1');
+  const jobs = await getReduxStateJobs(rootDir);
+
+  expect(jobs).toEqual([]);
+});
