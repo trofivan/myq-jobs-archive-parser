@@ -10,7 +10,7 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
 {
   locale: 'en',
   filter: {
-    users: ['trofivan'],
+    users: ['dlatek6p'],
     jobsType: {
       print: true,
       scan: true,
