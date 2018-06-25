@@ -19,7 +19,7 @@ const convertJobObject = (xmlFile, { data }) => ({
 const errToResolvePromise = (xmlFile, e) =>
   Promise.resolve({
     xmlFile,
-    error: e.message.split('\n')[0]
+    error: true
   });
 
 const xmlFilesToPromises = xmlFiles =>
