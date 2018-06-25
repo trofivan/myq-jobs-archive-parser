@@ -35,8 +35,8 @@ test('Simple async test', async () => {
   const parsedPath = await asyncPathParser(stringPath);
 
   expect(parsedPath).toEqual({
-    root: '/',
-    dir: '/home/user/dir',
+    root: path.join('/'),
+    dir: path.join('/', 'home', 'user', 'dir'),
     base: 'file.txt',
     ext: '.txt',
     name: 'file'
