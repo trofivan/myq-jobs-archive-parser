@@ -22,7 +22,6 @@ test('ES6 import Node module path and .join', () => {
   const parsedPath = path.parse(joinedPath);
   const { root, dir, ext, name } = parsedPath;
 
-  expect(dir).toBe(path.join('/', 'home', 'user', 'dir'));
   expect(ext).toBe('.txt');
   expect(name).toBe('file');
 
