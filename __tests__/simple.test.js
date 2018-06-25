@@ -1,13 +1,13 @@
 import path from 'path';
 
 const asyncPathParser = async url =>
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
     setTimeout(() => {
       const parsed = path.parse(url);
       resolve(parsed);
     }, 200);
   });
-  
+
 test('Simple test: 1 + 2 + 3 equal 6', () => {
   const sum = 1 + 2 + 3;
 
@@ -20,10 +20,10 @@ test('Simple test: 1 + 2 + 3 equal 6', () => {
 test('ES6 import Node module path and .join', () => {
   const joinedPath = path.join('/', 'home', 'user', 'dir', 'file.txt');
   const parsedPath = path.parse(joinedPath);
-  const { root, dir, base, ext, name } = parsedPath;
+  const { root, dir, ext, name } = parsedPath;
 
   expect(root).toBe('/');
-  expect(dir).toBe('/home/user/dir');
+  expect(dir).toBe(path.join('/', 'home', 'user', 'dir'));
   expect(ext).toBe('.txt');
   expect(name).toBe('file');
 
@@ -31,7 +31,7 @@ test('ES6 import Node module path and .join', () => {
 });
 
 test('Simple async test', async () => {
-  const stringPath = '/home/user/dir/file.txt';
+  const stringPath = path.join('/', 'home', 'user', 'dir', 'file.txt');
   const parsedPath = await asyncPathParser(stringPath);
 
   expect(parsedPath).toEqual({
