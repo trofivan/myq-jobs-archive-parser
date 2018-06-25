@@ -34,7 +34,7 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
       xmlFile: '/home/username/Desktop/__data__/dirs/job-copy.xml'
     },
     {
-      error: 'Non-whitespace before first tag.',
+      error: true,
       xmlFile: '/home/username/Desktop/__data__/dirs/job-invalid.xml'
     },
     {
