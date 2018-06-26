@@ -1,6 +1,6 @@
 import * as types from '../constants/actionTypes';
 
-export const changeJobsFolder = jobsFolder => ({
-  type: types.CHANGE_JOBS_FOLDER,
+export const setJobsFolder = jobsFolder => ({
+  type: types.SET_JOBS_FOLDER,
   jobsFolder
 });

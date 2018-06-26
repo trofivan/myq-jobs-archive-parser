@@ -16,7 +16,7 @@ const sliceString = (str, tailLength = 20) =>
 const getButtonText = jobsFolder =>
   jobsFolder === '' ? getTextSelectFolder() : sliceString(jobsFolder);
 
-export default ({ jobsFolder, onChangeJobsFolder }) => (
+export default ({ jobsFolder, onSetJobsFolder }) => (
   <div>
     <Button
       type="primary"
@@ -34,7 +34,7 @@ export default ({ jobsFolder, onChangeJobsFolder }) => (
       nwdirectory="true"
       nwworkingdir={jobsFolder === '' ? getHomeDir() : jobsFolder}
       ref={chooseFolderRef}
-      onChange={e => onChangeJobsFolder(e.target.value)}
+      onChange={e => onSetJobsFolder(e.target.value)}
       style={{ display: 'none' }}
     />
   </div>

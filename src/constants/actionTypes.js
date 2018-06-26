@@ -1,1 +1,2 @@
-export const CHANGE_JOBS_FOLDER = 'CHANGE_JOBS_FOLDER';
+export const SET_JOBS_FOLDER = 'SET_JOBS_FOLDER';
+
