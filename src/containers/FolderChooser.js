@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { choiceJobsFolder } from '../actions';
+import { changeJobsFolder } from '../actions';
 import FolderChooser from '../components/Header/FolderChooser';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onChoiceJobsFolder: newFolder => dispatch(choiceJobsFolder(newFolder))
+  onChangeJobsFolder: newFolder => dispatch(changeJobsFolder(newFolder))
 });
 
 export default connect(
