@@ -6,8 +6,8 @@ import RenderIpAddrColumn from './RenderIpAddrColumn';
 import RenderJobTypeColumn from './RenderJobTypeColumn';
 import RenderUserColumn from './RenderUserColumn';
 
-const JobsTable = ({ dataSource }) => (
-  <Table dataSource={dataSource} pagination={false} size="middle">
+const JobsTable = ({ jobs }) => (
+  <Table dataSource={jobs} pagination={false} size="middle">
     <Table.Column title="Date and time" dataIndex="timeStamp" key="timeStamp" />
     <Table.Column
       title="User"
