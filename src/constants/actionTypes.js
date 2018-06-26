@@ -1,2 +1,1 @@
-export const ADD_TODO = 'ADD_TODO';
-export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const CHOICE_JOBS_FOLDER = 'CHOICE_JOBS_FOLDER';

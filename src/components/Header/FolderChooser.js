@@ -1,22 +1,30 @@
 import React from 'react';
 import { Button, Icon } from 'antd';
+import { homedir as getHomeDir } from 'os';
 
 const chooseFolderRef = React.createRef();
 
-const handlerClick = e => {
+const handlerClick = () => {
   chooseFolderRef.current.click();
 };
 
-const handlerChange = e => {
-  console.log(e.target.value);
-};
+const getTextSelectFolder = () => 'Select folder to parse';
 
-export default () => (
+const sliceString = (str, tailLength = 20) =>
+  str.length > tailLength ? `...${str.slice(-tailLength)}` : str;
+
+const getButtonText = jobsFolder =>
+  jobsFolder === '' ? getTextSelectFolder() : sliceString(jobsFolder);
+
+export default ({ jobsFolder, onChoiceJobsFolder }) => (
   <div>
-    <Button type="primary" onClick={handlerClick}>
-      <Icon type="file-add" /> Select folder to parse
+    <Button
+      type="primary"
+      onClick={handlerClick}
+      title={jobsFolder === '' ? getTextSelectFolder() : jobsFolder}
+    >
+      <Icon type="file-add" /> {getButtonText(jobsFolder)}
     </Button>
-
     {/* 
       This trick allows to select a folder. 
       More info: https://github.com/nwjs/nw.js/wiki/file-dialogs#why-not-provide-api-in-javascript   
@@ -24,9 +32,10 @@ export default () => (
     <input
       type="file"
       nwdirectory="true"
-      style={{ display: 'none' }}
+      nwworkingdir={jobsFolder === '' ? getHomeDir() : jobsFolder}
       ref={chooseFolderRef}
-      onChange={handlerChange}
+      onChange={e => onChoiceJobsFolder(e.target.value)}
+      style={{ display: 'none' }}
     />
   </div>
 );

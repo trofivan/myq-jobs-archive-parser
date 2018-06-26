@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
+import jobsFolder from './jobsFolder';
 
-export default combineReducers({ todos });
+export default combineReducers({ jobsFolder });

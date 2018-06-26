@@ -1,7 +1,6 @@
 import React from 'react';
-import { Row, Col } from 'antd';
 
-import FolderChooser from './FolderChooser';
+import FolderChooser from '../../containers/FolderChooser';
 import JobsTypeSelector from './JobsTypeSelector';
 import LocaleSelector from './LocaleSelector';
 import UsersSelector from './UsersSelector';
