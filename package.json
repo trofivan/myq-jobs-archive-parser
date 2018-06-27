@@ -11,6 +11,9 @@
     "min_height": 600,
     "position": "center"
   },
+  "build": {
+    "nwVersion": "0.31.3"
+  },
   "scripts": {
     "start": "npm run build.dev && run .",
     "build.dev": "webpack --mode=development",
@@ -39,6 +42,7 @@
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
@@ -47,6 +51,7 @@
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
