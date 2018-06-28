@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
-import jobsFolder from './jobsFolder';
 
-export default combineReducers({ jobsFolder });
+import jobsFolder from './jobsFolder';
+import fetchJobs from './fetchJobs';
+
+export default combineReducers({ jobsFolder, fetchJobs });

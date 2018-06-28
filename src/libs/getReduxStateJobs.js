@@ -1,4 +1,3 @@
-import path from 'path';
 import getXmlFiles from './getXmlFiles';
 import xmlToJS from './xmlToJS';
 
@@ -19,7 +18,7 @@ const convertJobObject = (xmlFile, { data }) => ({
 const errToResolvePromise = (xmlFile, e) =>
   Promise.resolve({
     xmlFile,
-    error: true
+    error: e.message.replace(/(\r\n|\n|\r)/gm, ' | ')
   });
 
 const xmlFilesToPromises = xmlFiles =>

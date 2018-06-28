@@ -13,7 +13,7 @@ const result = [
     xmlFile: path.join(__dirname, 'dirs', 'job-copy.xml')
   },
   {
-    error: true,
+    
     xmlFile: path.join(__dirname, 'dirs', 'job-invalid.xml')
   },
   {
@@ -37,7 +37,7 @@ const result = [
     xmlFile: path.join(__dirname, 'dirs', 'job-scan.XML')
   },
   {
-    error: true,
+    
     xmlFile: path.join(__dirname, 'dirs', 'dir_1', 'job-invalid.xml')
   },
   {
@@ -51,7 +51,7 @@ const result = [
     xmlFile: path.join(__dirname, 'dirs', 'dir_1', 'job-print.xml')
   },
   {
-    error: true,
+    
     xmlFile: path.join(
       __dirname,
       'dirs',
@@ -71,7 +71,7 @@ const result = [
     xmlFile: path.join(__dirname, 'dirs', 'dir_1', 'subdir_1', 'job-print.XML')
   },
   {
-    error: true,
+    
     xmlFile: path.join(__dirname, 'dirs', 'dir_3', 'job-invalid.XML')
   },
   {
@@ -85,7 +85,7 @@ const result = [
     xmlFile: path.join(__dirname, 'dirs', 'dir_3', 'job-print.xml')
   },
   {
-    error: true,
+    
     xmlFile: path.join(__dirname, 'dirs', 'dir_4', 'job-invalid.xml')
   },
   {
@@ -106,7 +106,7 @@ test('Getting *.xml jobs files array and convert it to the Redux state', async (
   const rootDir = path.join(__dirname, 'dirs');
   const jobs = await getReduxStateJobs(rootDir);
 
-  expect(jobs).toEqual(result);
+  expect(jobs).toMatchObject(result);
 });
 
 test('Getting *.xml jobs files array and convert it to the Redux state - empty folder', async () => {

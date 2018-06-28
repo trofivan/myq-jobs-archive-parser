@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setJobsFolder } from '../actions';
+import { setJobsFolder, fetchJobs } from '../actions';
 import FolderChooser from '../components/Header/FolderChooser';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,7 +7,10 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onSetJobsFolder: newFolder => dispatch(setJobsFolder(newFolder))
+  onSetJobsFolder: newFolder => {
+    dispatch(setJobsFolder(newFolder));
+    dispatch(fetchJobs(newFolder));
+  }
 });
 
 export default connect(
