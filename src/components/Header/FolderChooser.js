@@ -16,14 +16,16 @@ const sliceString = (str, tailLength = 20) =>
 const getButtonText = jobsFolder =>
   jobsFolder === '' ? getTextSelectFolder() : sliceString(jobsFolder);
 
-export default ({ jobsFolder, onSetJobsFolder }) => (
+export default ({ isFetchingJobs, jobsFolder, onSetJobsFolder }) => (
   <div>
     <Button
       type="primary"
       onClick={handlerClick}
       title={jobsFolder === '' ? getTextSelectFolder() : jobsFolder}
+      loading={isFetchingJobs}
     >
-      <Icon type="file-add" /> {getButtonText(jobsFolder)}
+      {isFetchingJobs ? '' : <Icon type="file-add" />}
+      {getButtonText(jobsFolder)}
     </Button>
     {/* 
       This trick allows to select a folder. 
