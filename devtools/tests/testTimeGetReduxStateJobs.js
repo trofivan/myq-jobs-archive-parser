@@ -8,8 +8,5 @@ const start = new Date();
 getReduxStateJobs(rootDir).then(jobs => {
   console.log(`Jobs count:  ${jobs.length}`);
   console.log(`Time:        ${(new Date() - start) / 1000} s`);
-  //console.log(`With error:  ${jobs.filter(job => job.error).length}`);
-  // jobs.map(job => {
-  //   console.log(job.jobType)
-  // });
+  console.log(`With error:  ${jobs.filter(job => job.error).length}`);
 });

@@ -8,8 +8,10 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onSetJobsFolder: newFolder => {
-    dispatch(setJobsFolder(newFolder));
-    dispatch(fetchJobs(newFolder));
+    if (newFolder !== '') {
+      dispatch(setJobsFolder(newFolder));
+      dispatch(fetchJobs(newFolder));
+    }
   }
 });
 
