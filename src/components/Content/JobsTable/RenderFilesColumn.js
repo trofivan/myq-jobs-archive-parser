@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RenderFilesColumn = (files, { path }) => (
+const RenderFilesColumn = (files = [], { path }) => (
   <ul style={{ padding: 0, listStyleType: 'none' }}>
     {files.map((name, index) => (
       <li key={index} href="#">

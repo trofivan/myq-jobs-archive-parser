@@ -26,7 +26,10 @@ const fetchJobs = jobsFolder => async dispatch => {
   dispatch(fetchJobsRequest(jobsFolder));
 
   try {
-    const jobs = await getReduxStateJobs(jobsFolder);
+    const jobs = (await getReduxStateJobs(jobsFolder)).map((job, key) => ({
+      key,
+      ...job
+    }));
     dispatch(fetchJobsSuccess(jobs));
   } catch (error) {
     dispatch(fetchJobsError(error));

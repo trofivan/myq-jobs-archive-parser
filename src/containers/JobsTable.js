@@ -5,7 +5,9 @@ const mapStateToProps = state => ({
   jobs: state.jobs.list
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  
+});
 
 export default connect(
   mapStateToProps,
