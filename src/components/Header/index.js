@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FolderChooser from '../../containers/FolderChooser';
-import JobsTypeSelector from './JobsTypeSelector';
+import JobsTypeSelector from '../../containers/Header/JobsTypeSelector';
 import LocaleSelector from './LocaleSelector';
 import UsersSelector from './UsersSelector';
 import DateRangeSelector from './DateRangeSelector';

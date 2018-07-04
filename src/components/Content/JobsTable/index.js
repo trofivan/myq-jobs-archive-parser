@@ -7,11 +7,7 @@ import RenderJobTypeColumn from './RenderJobTypeColumn';
 import RenderUserColumn from './RenderUserColumn';
 
 const JobsTable = ({ jobs }) => (
-  <Table
-    dataSource={jobs}
-    pagination={false}
-    size="middle"
-  >
+  <Table dataSource={jobs} pagination={false} size="middle">
     <Table.Column title="Date and time" dataIndex="timestamp" key="timestamp" />
     <Table.Column
       title="User"
