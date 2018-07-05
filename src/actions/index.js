@@ -7,6 +7,7 @@ export const fetchJobs = actionFetchJobs;
 // Jobs filter
 import {
   JOBS_FILTER_SET_TYPE,
+  JOBS_FILTER_SET_USERS,
   JOBS_FILTER_SET_DATE_START,
   JOBS_FILTER_SET_DATE_END
 } from '../constants/actionTypes';
