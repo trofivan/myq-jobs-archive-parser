@@ -7,7 +7,7 @@ const getUsersForFilter = (jobsList = []) => {
     .map(job => job.username || null)
     .filter(user => user !== null);
 
-  return [...new Set(users)];
+  return [...new Set(users)].sort((a, b) => a.localeCompare(b));
 };
 
 const mapStateToProps = state => ({
