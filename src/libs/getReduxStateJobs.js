@@ -31,7 +31,13 @@ const xmlFilesToPromises = xmlFiles =>
 export default async rootDir => {
   const xmlFiles = await getXmlFiles(rootDir);
   const promises = xmlFilesToPromises(xmlFiles);
-  const jobsState = await Promise.all(promises);
+  const jobs = await Promise.all(promises);
+  const jobsState = jobs.sort((a, b) => {
+    const aTime = new Date(a.timestamp || 0).getTime();
+    const bTime = new Date(b.timestamp || 0).getTime();
+
+    return bTime - aTime;
+  });
 
   return jobsState;
 };
