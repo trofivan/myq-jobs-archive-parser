@@ -1,15 +1,13 @@
 import {
   JOBS_FILTER_SET_TYPE,
-  JOBS_FILTER_SET_DATE_START,
-  JOBS_FILTER_SET_DATE_END,
+  JOBS_FILTER_SET_DATE_RANGE,
   JOBS_FILTER_SET_USERS
 } from '../constants/actionTypes';
 
 const initState = {
   users: [],
   jobsType: ['print', 'scan', 'copy'],
-  dateStart: null,
-  dateEnd: null
+  dateRange: [null, null]
 };
 
 const filter = (state = initState, action) => {
@@ -18,10 +16,8 @@ const filter = (state = initState, action) => {
       return { ...state, jobsType: action.jobsType };
     case JOBS_FILTER_SET_USERS:
       return { ...state, users: action.users };
-    case JOBS_FILTER_SET_DATE_START:
-      return { ...state, dateStart: action.dateStart };
-    case JOBS_FILTER_SET_DATE_END:
-      return { ...state, dateEnd: action.dateEnd };
+    case JOBS_FILTER_SET_DATE_RANGE:
+      return { ...state, dateRange: action.dateRange };
     default:
       return state;
   }
