@@ -1,33 +1,15 @@
 import actionSetJobsFolder from './setJobsFolder';
 import actionFetchJobs from './fetchJobs';
+import {
+  setJobsType as actionSetJobsType,
+  setUsers as actionSetUsers,
+  setDateRange as actionSetDateRange
+} from './jobsFilter';
 
 export const setJobsFolder = actionSetJobsFolder;
+
 export const fetchJobs = actionFetchJobs;
 
-// Jobs filter
-import {
-  JOBS_FILTER_SET_TYPE,
-  JOBS_FILTER_SET_USERS,
-  JOBS_FILTER_SET_DATE_START,
-  JOBS_FILTER_SET_DATE_END
-} from '../constants/actionTypes';
-
-export const setJobsType = jobsType => ({
-  type: JOBS_FILTER_SET_TYPE,
-  jobsType
-});
-
-export const setUsers = users => ({
-  type: JOBS_FILTER_SET_USERS,
-  users
-});
-
-export const setDateStart = dateStart => ({
-  type: JOBS_FILTER_SET_DATE_START,
-  dateStart
-});
-
-export const setDateEnd = dateEnd => ({
-  type: JOBS_FILTER_SET_DATE_END,
-  dateEnd
-});
+export const setJobsType = actionSetJobsType;
+export const setUsers = actionSetUsers;
+export const setDateRange = actionSetDateRange;
