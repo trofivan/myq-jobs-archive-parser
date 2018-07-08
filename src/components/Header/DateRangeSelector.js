@@ -2,9 +2,10 @@ import React from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
 
-export default () => (
+export default ({ isDisabled, onChangeDateRange }) => (
   <DatePicker.RangePicker
-    disabled
+    disabled={isDisabled}
+    onChange={onChangeDateRange}
     ranges={{
       Today: [moment(), moment()],
       'This Week': [moment().startOf('week'), moment().endOf('week')],

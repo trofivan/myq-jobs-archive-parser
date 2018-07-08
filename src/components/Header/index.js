@@ -3,7 +3,7 @@ import React from 'react';
 import FolderChooser from '../../containers/FolderChooser';
 import JobsTypeSelector from '../../containers/Header/JobsTypeSelector';
 import UsersSelector from '../../containers/Header/UsersSelector';
-import DateRangeSelector from './DateRangeSelector';
+import DateRangeSelector from '../../containers/Header/DateRangeSelector';
 import LocaleSelector from './LocaleSelector';
 
 const styleFlexContainer = {
