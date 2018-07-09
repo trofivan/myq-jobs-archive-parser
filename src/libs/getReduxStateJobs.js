@@ -3,7 +3,7 @@ import xmlToJS from './xmlToJS';
 
 const convertJobObject = (xmlFile, { data }) => ({
   xmlFile,
-  timestamp: data.timestamp,
+  timestamp: Date.parse(data.timestamp),
   jobType: data.jobType,
   printerAddr: data.printerAddr,
   serverName: data.serverName,
