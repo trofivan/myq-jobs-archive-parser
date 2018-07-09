@@ -8,7 +8,7 @@ const result = [
     printerAddr: '53.201.154.38',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-08-05 08:32:06',
+    timestamp: 1501903926000,
     username: 'mesp60',
     xmlFile: path.join(__dirname, 'dirs', 'dir_4', 'job-print.xml')
   },
@@ -18,7 +18,7 @@ const result = [
     printerAddr: '53.201.154.38',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-08-05 08:32:06',
+    timestamp: 1501903926000,
     username: 'mesp60',
     xmlFile: path.join(__dirname, 'dirs', 'job-print.xml')
   },
@@ -28,7 +28,7 @@ const result = [
     printerAddr: '53.201.154.38',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-08-05 08:32:06',
+    timestamp: 1501903926000,
     username: 'mesp60',
     xmlFile: path.join(__dirname, 'dirs', 'dir_3', 'job-print.xml')
   },
@@ -38,7 +38,7 @@ const result = [
     printerAddr: '53.201.154.38',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-08-05 08:32:06',
+    timestamp: 1501903926000,
     username: 'mesp60',
     xmlFile: path.join(__dirname, 'dirs', 'dir_1', 'job-print.xml')
   },
@@ -48,7 +48,7 @@ const result = [
     printerAddr: '53.201.154.38',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-08-05 08:32:06',
+    timestamp: 1501903926000,
     username: 'mesp60',
     xmlFile: path.join(__dirname, 'dirs', 'dir_1', 'subdir_1', 'job-print.XML')
   },
@@ -58,7 +58,7 @@ const result = [
     printerAddr: '236.79.97.64',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-06-12 10:33:55',
+    timestamp: 1497245635000,
     username: 'mturone31',
     xmlFile: path.join(__dirname, 'dirs', 'job-scan.XML')
   },
@@ -68,7 +68,7 @@ const result = [
     printerAddr: '102.85.96.219',
     serverName: 'SRV-MYQ01.domain.local',
     serverVersion: '6.2.4.27',
-    timestamp: '2017-01-30 15:42:51',
+    timestamp: 1485772971000,
     username: 'dlatek6p',
     xmlFile: path.join(__dirname, 'dirs', 'job-copy.xml')
   },
