@@ -10,8 +10,7 @@ import RenderTimestampColumn from './RenderTimestampColumn';
 const paginationConfig = {
   pageSize: 50,
   pageSizeOptions: ['50', '100', '150', '200'],
-  showSizeChanger: true,
-  hideOnSinglePage: true
+  showSizeChanger: true
 };
 
 const JobsTable = ({ jobs }) => (
