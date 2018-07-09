@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import DateRangeSelector from '../../components/Header/DateRangeSelector';
 import moment from 'moment';
+import { setDateRange } from '../../actions';
+import DateRangeSelector from '../../components/Header/DateRangeSelector';
 
 const mapStateToProps = state => ({
   isDisabled: state.jobs.list.length === 0
@@ -8,9 +9,17 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onChangeDateRange: date => {
-    const dateStart = date[0].toString();
-    const dateEnd = date[1].toString();
-    console.log({ dateStart, dateEnd });
+    const start = date[0] || null;
+    const end = date[1] || null;
+
+    return moment(start).isValid() && moment(end).isValid()
+      ? dispatch(
+          setDateRange([
+            start.startOf('day').valueOf(),
+            end.endOf('day').valueOf()
+          ])
+        )
+      : dispatch(setDateRange([null, null]));
   }
 });
 

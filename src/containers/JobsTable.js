@@ -11,13 +11,18 @@ const filterByUsers = users => jobs =>
   jobs.filter(
     job => (users.length === 0 ? true : users.includes(job.username))
   );
+const filterByDaterange = ([start, end]) => jobs =>
+  start === null && end === null
+    ? jobs
+    : jobs.filter(({ timestamp }) => timestamp >= start && timestamp <= end);
 
 const mapStateToProps = state => ({
   jobs: filterJobs(
     state.jobs.list,
     filterNoErrors,
     filterByType(state.filter.jobsType),
-    filterByUsers(state.filter.users)
+    filterByUsers(state.filter.users),
+    filterByDaterange(state.filter.dateRange)
   )
 });
 

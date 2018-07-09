@@ -5,10 +5,23 @@ import RenderFilesColumn from './RenderFilesColumn';
 import RenderIpAddrColumn from './RenderIpAddrColumn';
 import RenderJobTypeColumn from './RenderJobTypeColumn';
 import RenderUserColumn from './RenderUserColumn';
+import RenderTimestampColumn from './RenderTimestampColumn';
+
+const paginationConfig = {
+  pageSize: 50,
+  pageSizeOptions: ['50', '100', '150', '200'],
+  showSizeChanger: true,
+  hideOnSinglePage: true
+};
 
 const JobsTable = ({ jobs }) => (
-  <Table dataSource={jobs} pagination={false} size="middle">
-    <Table.Column title="Date and time" dataIndex="timestamp" key="timestamp" />
+  <Table dataSource={jobs} pagination={paginationConfig} size="middle">
+    <Table.Column
+      title="Date and time"
+      dataIndex="timestamp"
+      key="timestamp"
+      render={RenderTimestampColumn}
+    />
     <Table.Column
       title="User"
       dataIndex="username"
