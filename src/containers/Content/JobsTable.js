@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import JobsTable from '../components/Content/JobsTable';
-import { setUsers } from '../actions';
+import JobsTable from '../../components/Content/JobsTable';
+import { setUsers } from '../../actions';
 
 const filterJobs = (jobs = [], ...funcs) =>
   funcs.reduce((acc, fn) => fn(acc), jobs);

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { setJobsFolder, fetchJobs } from '../actions';
-import FolderChooser from '../components/Header/FolderChooser';
+import { setJobsFolder, fetchJobs } from '../../actions';
+import FolderChooser from '../../components/Header/FolderChooser';
 
 const mapStateToProps = state => ({
   jobsFolder: state.jobsFolder,
