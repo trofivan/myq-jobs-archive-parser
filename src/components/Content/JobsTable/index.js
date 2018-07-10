@@ -13,7 +13,7 @@ const paginationConfig = {
   showSizeChanger: true
 };
 
-const JobsTable = ({ jobs }) => (
+const JobsTable = ({ jobs, onClickUserFilter }) => (
   <Table dataSource={jobs} pagination={paginationConfig} size="middle">
     <Table.Column
       title="Date and time"
@@ -25,7 +25,7 @@ const JobsTable = ({ jobs }) => (
       title="User"
       dataIndex="username"
       key="username"
-      render={RenderUserColumn}
+      render={RenderUserColumn(onClickUserFilter)}
     />
     <Table.Column
       title="Type"

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import JobsTable from '../components/Content/JobsTable';
+import { setUsers } from '../actions';
 
 const filterJobs = (jobs = [], ...funcs) =>
   funcs.reduce((acc, fn) => fn(acc), jobs);
@@ -26,7 +27,9 @@ const mapStateToProps = state => ({
   )
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  onClickUserFilter: user => dispatch(setUsers([user]))
+});
 
 export default connect(
   mapStateToProps,

@@ -12,7 +12,8 @@ const getUsersForFilter = (jobsList = []) => {
 
 const mapStateToProps = state => ({
   isDisabled: state.jobs.list.length === 0,
-  users: getUsersForFilter(state.jobs.list)
+  users: getUsersForFilter(state.jobs.list),
+  selectedUsers: state.filter.users
 });
 
 const mapDispatchToProps = dispatch => ({
