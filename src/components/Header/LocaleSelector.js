@@ -4,7 +4,7 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 export default () => (
-  <Select defaultValue="English">
+  <Select disabled defaultValue="English">
     <Option value="English">English</Option>
     <Option value="Russian">Русский</Option>
   </Select>
