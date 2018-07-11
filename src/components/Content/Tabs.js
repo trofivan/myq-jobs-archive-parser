@@ -11,10 +11,10 @@ export default ({ jobsCount = 0, warningsCount = 0 }) => (
     </Tabs.TabPane>
     <Tabs.TabPane
       tab={
-        <span>
+        <div>
           Warnings{' '}
           <Badge count={warningsCount} style={{ backgroundColor: '#dc0022' }} />
-        </span>
+        </div>
       }
       key="warnings"
     >
