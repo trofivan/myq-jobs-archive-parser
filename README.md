@@ -10,19 +10,9 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
 {
   locale: 'en',
   filter: {
-    users: [
-      'dlatek6p',
-      'mesp60'
-    ],
-    jobsType: [
-      'print',
-      'scan',
-      'copy'
-    ],
-    dateRange: [
-      null,
-      null
-    ]
+    users: ['dlatek6p', 'mesp60'],
+    jobsType: ['print', 'scan', 'copy'],
+    dateRange: [null, null]
   },
   jobsFolder: '/home/username/Desktop/__data__',
   jobs: {
@@ -37,10 +27,7 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
         serverName: 'SRV-MYQ01.domain.local',
         serverVersion: '6.2.4.27',
         username: 'mesp60',
-        files: [
-          'job-0.pdf',
-          'job-1.pdf'
-        ]
+        files: ['job-0.pdf', 'job-1.pdf']
       },
       {
         key: 1,
@@ -51,11 +38,7 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
         serverName: 'SRV-MYQ01.domain.local',
         serverVersion: '6.2.4.27',
         username: 'dlatek6p',
-        files: [
-          'job-0.pdf',
-          'job-1.pdf',
-          'job-2.pdf'
-        ]
+        files: ['job-0.pdf', 'job-1.pdf', 'job-2.pdf']
       },
       {
         key: 2,
@@ -66,19 +49,19 @@ MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
         serverName: 'SRV-MYQ01.domain.local',
         serverVersion: '6.2.4.27',
         username: 'mesp60',
-        files: [
-          'job-0.pdf'
-        ]
+        files: ['job-0.pdf']
       },
       {
         key: 3,
         xmlFile: '/home/username/Desktop/__tests__/dirs/dir_4/job-invalid.xml',
-        error: 'Non-whitespace before first tag. | Line: 0 | Column: 1 | Char: I'
+        error:
+          'Non-whitespace before first tag. | Line: 0 | Column: 1 | Char: I'
       },
       {
         key: 4,
         xmlFile: '/home/username/Desktop/__tests__/dirs/job-invalid.xml',
-        error: 'Non-whitespace before first tag. | Line: 0 | Column: 1 | Char: I'
+        error:
+          'Non-whitespace before first tag. | Line: 0 | Column: 1 | Char: I'
       }
     ]
   }
