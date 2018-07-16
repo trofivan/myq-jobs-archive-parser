@@ -24,17 +24,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader' }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          // options: {
-          //   presets: ['env', 'react'],
-          //   plugins: [
-          //     'transform-object-rest-spread',
-          //     ['import', { libraryName: 'antd', style: true }]
-          //   ]
-          // }
+          loader: 'babel-loader'
         }
       },
       {
