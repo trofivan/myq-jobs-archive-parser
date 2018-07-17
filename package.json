@@ -12,7 +12,7 @@
     "position": "center"
   },
   "build": {
-    "nwVersion": "0.31.3"
+    "nwVersion": "v0.32.0-beta1"
   },
   "scripts": {
     "start": "npm run build.dev && run .",
