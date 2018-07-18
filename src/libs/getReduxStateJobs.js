@@ -1,8 +1,10 @@
+import path from 'path';
 import getXmlFiles from './getXmlFiles';
 import xmlToJS from './xmlToJS';
 
 const convertJobObject = (xmlFile, { data }) => ({
   xmlFile,
+  path: path.parse(xmlFile).dir,
   timestamp: Date.parse(data.timestamp),
   jobType: data.jobType,
   printerAddr: data.printerAddr,
