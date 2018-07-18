@@ -4,7 +4,7 @@
   "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
-  "chromium-args": "--mixed-context --enable-node-worker --load-extension=./devtools/react-devtools,./devtools/redux-devtools",
+  "chromium-args": "--mixed-context --enable-node-worker",
   "window": {
     "icon": "build/assets/icon.png",
     "min_width": 800,
@@ -12,12 +12,27 @@
     "position": "center"
   },
   "build": {
-    "nwVersion": "v0.32.0-beta1"
+    "nwVersion": "v0.32.0-beta1",
+    "targets": [
+      "zip"
+    ],
+    "files": [
+      "build/**/*"
+    ],
+    "win": {
+      "copyright": "Ivan Trofimov",
+      "icon": "build/assets/icon.ico"
+    },
+    "mac": {
+      "copyright": "Ivan Trofimov",
+      "icon": "build/assets/icon.icns"
+    }
   },
   "scripts": {
-    "start": "npm run build.dev && run .",
+    "start": "npm run build.dev && run -- . --load-extension=./devtools/react-devtools,./devtools/redux-devtools --remote-debugging-port=9222",
     "build.dev": "webpack --mode=development",
     "build.prod": "webpack --mode=production",
+    "build.dist": "rimraf ./dist && npm run build.prod && build --tasks win-x64,linux-x64,mac-x64 .",
     "test": "jest"
   },
   "repository": {
@@ -63,6 +78,7 @@
     "less-vars-to-js": "^1.2.1",
     "nwjs-builder-phoenix": "^1.14.6",
     "regenerator-runtime": "^0.11.1",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
