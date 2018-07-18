@@ -20,11 +20,11 @@
       "build/**/*"
     ],
     "win": {
-      "copyright": "Ivan Trofimov",
+      "copyright": "Copyright © 2018 Ivan Trofimov",
       "icon": "build/assets/icon.ico"
     },
     "mac": {
-      "copyright": "Ivan Trofimov",
+      "copyright": "Copyright © 2018 Ivan Trofimov",
       "icon": "build/assets/icon.icns"
     }
   },
