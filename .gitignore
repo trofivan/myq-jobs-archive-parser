@@ -65,3 +65,4 @@ transpiled/*
 !transpiled/.keep
 
 build/*.js
+dist/
