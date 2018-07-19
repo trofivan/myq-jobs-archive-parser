@@ -6,7 +6,7 @@
   "main": "build/index.html",
   "chromium-args": "--mixed-context --enable-node-worker",
   "window": {
-    "icon": "build/assets/icon.png",
+    "icon": "build/assets/app.png",
     "min_width": 800,
     "min_height": 600,
     "position": "center"
@@ -21,11 +21,11 @@
     ],
     "win": {
       "copyright": "Copyright © 2018 Ivan Trofimov",
-      "icon": "build/assets/icon.ico"
+      "icon": "build/assets/app.ico"
     },
     "mac": {
       "copyright": "Copyright © 2018 Ivan Trofimov",
-      "icon": "build/assets/icon.icns"
+      "icon": "build/assets/app.icns"
     }
   },
   "scripts": {
