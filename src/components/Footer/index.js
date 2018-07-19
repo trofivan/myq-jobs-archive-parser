@@ -37,7 +37,7 @@ export default () => (
         }}
       >
         {appName}
-      </a>, v.{appVer}
+      </a>, v{appVer}
     </Col>
   </Row>
 );
