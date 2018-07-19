@@ -9,7 +9,7 @@ const styleRow = {
 export default () => (
   <Row type="flex" align="middle" style={styleRow}>
     <Col span={11} offset={1}>
-      <img src="assets/logo.png" />
+      <img src="assets/logo.svg" alt="MyQ Jobs Archive Parser" />
     </Col>
     <Col span={11} style={{ textAlign: 'right' }}>
       Copyright &copy; 2018 Ivan Trofimov<br />
