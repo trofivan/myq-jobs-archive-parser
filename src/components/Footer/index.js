@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Icon } from 'antd';
+import { name as appName, version as appVer } from '../../../package.json';
 
 const styleRow = {
   padding: '16px 0',
@@ -35,8 +36,8 @@ export default () => (
           );
         }}
       >
-        myq-jobs-archive-parser
-      </a>
+        {appName}
+      </a>, v.{appVer}
     </Col>
   </Row>
 );
