@@ -1,7 +1,7 @@
 import getDirs from '../libs/getDirs';
 
 const iter = async (acc = [], current) => {
-  const dirs = await getDirs(current);
+  const dirs = (await getDirs(current)) || [];
 
   return dirs.length === 0
     ? acc
