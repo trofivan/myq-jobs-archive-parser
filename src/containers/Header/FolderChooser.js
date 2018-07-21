@@ -1,5 +1,9 @@
 import { connect } from 'react-redux';
-import { setJobsFolder, fetchJobsRequest } from '../../actions';
+import {
+  setJobsFolder,
+  fetchJobsRequest,
+  fetchJobsCancel
+} from '../../actions';
 import FolderChooser from '../../components/Header/FolderChooser';
 
 const mapStateToProps = state => ({
@@ -13,6 +17,10 @@ const mapDispatchToProps = dispatch => ({
       dispatch(setJobsFolder(newFolder));
       dispatch(fetchJobsRequest(newFolder));
     }
+  },
+  onCancelJobsFetching: () => {
+    dispatch(fetchJobsCancel());
+    dispatch(setJobsFolder(''));
   }
 });
 

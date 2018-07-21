@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Icon } from 'antd';
+import { Button } from 'antd';
 import { homedir as getHomeDir } from 'os';
 
 const chooseFolderRef = React.createRef();
@@ -16,17 +16,29 @@ const sliceString = (str, tailLength = 20) =>
 const getButtonText = jobsFolder =>
   jobsFolder === '' ? getTextSelectFolder() : sliceString(jobsFolder);
 
-export default ({ isFetchingJobs, jobsFolder, onSetJobsFolder }) => (
+export default ({
+  isFetchingJobs,
+  jobsFolder,
+  onSetJobsFolder,
+  onCancelJobsFetching
+}) => (
   <div>
-    <Button
-      type="primary"
-      onClick={handlerClick}
-      title={jobsFolder === '' ? getTextSelectFolder() : jobsFolder}
-      loading={isFetchingJobs}
-    >
-      {isFetchingJobs ? '' : <Icon type="file-add" />}
-      {getButtonText(jobsFolder)}
-    </Button>
+    <Button.Group>
+      <Button
+        type="primary"
+        onClick={handlerClick}
+        title={jobsFolder === '' ? getTextSelectFolder() : jobsFolder}
+        loading={isFetchingJobs}
+        icon="file-add"
+      >
+        {getButtonText(jobsFolder)}
+      </Button>
+      {isFetchingJobs ? (
+        <Button type="danger" onClick={onCancelJobsFetching} icon="close" />
+      ) : (
+        ''
+      )}
+    </Button.Group>
     {/* 
       This trick allows to select a folder. 
       More info: https://github.com/nwjs/nw.js/wiki/file-dialogs#why-not-provide-api-in-javascript   
