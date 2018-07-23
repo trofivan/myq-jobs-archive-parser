@@ -49,6 +49,7 @@ export default ({
       nwworkingdir={jobsFolder === '' ? getHomeDir() : jobsFolder}
       ref={chooseFolderRef}
       onChange={e => onSetJobsFolder(e.target.value)}
+      value={jobsFolder}
       style={{ display: 'none' }}
     />
   </div>
