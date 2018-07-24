@@ -1,6 +1,11 @@
 # MyQ Jobs Archive Parser
 
-MyQ Jobs Archive Parser for Windows, Linux and Mac OS X.
+## What is MyQ?
+[MyQ](https://www.myq-solution.com/) - enterprise software for printing and scanning control. 
+It software 
+
+## License
+[MIT](LICENCE)
 
 # For developers
 
