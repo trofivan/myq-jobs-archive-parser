@@ -54,7 +54,7 @@ npm i
 npm start
 ```
 
-## The Redux state example of application
+## Redux state example
 
 ```js
 {
