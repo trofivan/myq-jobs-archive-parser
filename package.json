@@ -1,13 +1,13 @@
 {
   "name": "myq-jobs-archive-parser",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
   "chromium-args": "--mixed-context --enable-node-worker",
   "window": {
     "icon": "build/assets/app.png",
-    "min_width": 800,
+    "min_width": 840,
     "min_height": 600,
     "position": "center"
   },

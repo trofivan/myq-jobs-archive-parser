@@ -20,7 +20,8 @@ const styleHeader = {
 
 const styleContent = {
   flexGrow: 1,
-  overflow: 'auto'
+  overflow: 'auto',
+  zIndex: 5
 };
 
 const styleFooter = {
