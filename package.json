@@ -12,7 +12,7 @@
     "position": "center"
   },
   "build": {
-    "nwVersion": "latest",
+    "nwVersion": "stable",
     "targets": [
       "zip"
     ],
