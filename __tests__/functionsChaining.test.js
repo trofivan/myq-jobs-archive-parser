@@ -45,16 +45,18 @@ test('Chaining functions: get paths array from JSON', () => {
 
   const getFilenames = (startObj = []) =>
     startObj.jobs.list.map(el => el.files);
+
   const filenamesToFlatList = arr =>
     arr.reduce((acc, el) => [...acc, ...el], []);
-  const filenamesToPaths = files =>
+
+  const filenamesToPaths = dir => files =>
     files.map(file => path.join(obj.jobsFolder, file));
 
   const result = functionsChaining(
     obj,
     getFilenames,
     filenamesToFlatList,
-    filenamesToPaths
+    filenamesToPaths(obj.jobsFolder)
   );
 
   expect(result).toEqual([
