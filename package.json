@@ -7,7 +7,7 @@
   "chromium-args": "--mixed-context --enable-node-worker",
   "window": {
     "icon": "build/assets/app.png",
-    "min_width": 840,
+    "min_width": 850,
     "min_height": 600,
     "position": "center"
   },
