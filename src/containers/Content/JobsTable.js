@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
 import JobsTable from '../../components/Content/JobsTable';
 import { setUsers } from '../../actions';
-
-const filterJobs = (jobs = [], ...funcs) =>
-  funcs.reduce((acc, fn) => fn(acc), jobs);
+import filterJobs from '../../libs/functionsChaining';
 
 const filterNoErrors = jobs => jobs.filter(job => !job.error);
 const filterByType = types => jobs =>
