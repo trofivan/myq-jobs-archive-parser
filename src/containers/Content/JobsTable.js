@@ -4,12 +4,15 @@ import { setUsers } from '../../actions';
 import filterJobs from '../../libs/functionsChaining';
 
 const filterNoErrors = jobs => jobs.filter(job => !job.error);
+
 const filterByType = types => jobs =>
   jobs.filter(job => types.includes(job.jobType));
+
 const filterByUsers = users => jobs =>
   jobs.filter(
     job => (users.length === 0 ? true : users.includes(job.username))
   );
+
 const filterByDaterange = ([start, end]) => jobs =>
   start === null && end === null
     ? jobs
