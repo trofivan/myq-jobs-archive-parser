@@ -28,6 +28,10 @@
       "icon": "build/assets/app.icns"
     }
   },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
   "scripts": {
     "start": "npm run build.dev && run -- . --load-extension=./devtools/react-devtools,./devtools/redux-devtools --remote-debugging-port=9222",
     "build.dev": "webpack --mode=development",
