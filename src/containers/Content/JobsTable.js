@@ -1,25 +1,16 @@
 import { connect } from 'react-redux';
 import JobsTable from '../../components/Content/JobsTable';
 import { setUsers } from '../../actions';
-import filterJobs from '../../libs/functionsChaining';
-
-const filterNoErrors = jobs => jobs.filter(job => !job.error);
-
-const filterByType = types => jobs =>
-  jobs.filter(job => types.includes(job.jobType));
-
-const filterByUsers = users => jobs =>
-  jobs.filter(
-    job => (users.length === 0 ? true : users.includes(job.username))
-  );
-
-const filterByDaterange = ([start, end]) => jobs =>
-  start === null && end === null
-    ? jobs
-    : jobs.filter(({ timestamp }) => timestamp >= start && timestamp <= end);
+import functionsChaining from '../../libs/functionsChaining';
+import {
+  filterNoErrors,
+  filterByType,
+  filterByUsers,
+  filterByDaterange
+} from '../../../src/libs/jobFilters';
 
 const mapStateToProps = state => ({
-  jobs: filterJobs(
+  jobs: functionsChaining(
     state.jobs.list,
     filterNoErrors,
     filterByType(state.filter.jobsType),
