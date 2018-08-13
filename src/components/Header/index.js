@@ -14,7 +14,7 @@ export default () => (
       <div className="header__row">
         <FolderChooser />
       </div>
-      <div className="header__row header__row--all-width header__row--padding-left header__row--padding-right">
+      <div className="header__row header__row--all-width header__row--padding-left">
         <DateRangeSelector />
       </div>
       <div className="header__row">
