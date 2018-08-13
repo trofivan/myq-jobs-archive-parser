@@ -1,43 +1,20 @@
 import React from 'react';
+
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
 
-const styleFlexContainer = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100vh'
-};
-
-const styleFlexItem = {
-  width: '100%'
-};
-
-const styleHeader = {
-  boxShadow: '0 0 8px rgba(0,0,0,0.3)',
-  zIndex: 10
-};
-
-const styleContent = {
-  flexGrow: 1,
-  overflow: 'auto',
-  zIndex: 5
-};
-
-const styleFooter = {
-  boxShadow: '0 0 8px rgba(0,0,0,0.3)',
-  zIndex: 10
-};
+import './App.css';
 
 const App = () => (
-  <div style={styleFlexContainer}>
-    <div style={{ ...styleFlexItem, ...styleHeader }}>
+  <div className="app">
+    <div className="app__header">
       <Header />
     </div>
-    <div style={{ ...styleFlexItem, ...styleContent }}>
+    <div className="app__content">
       <Content />
     </div>
-    <div style={{ ...styleFlexItem, ...styleFooter }}>
+    <div className="app__footer">
       <Footer />
     </div>
   </div>

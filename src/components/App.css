@@ -1,0 +1,25 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app__header {
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.app__content {
+  width: 100%;
+  flex-grow: 1;
+  overflow: auto;
+  z-index: 5;
+  padding: 16px 0;
+}
+
+.app__footer {
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}

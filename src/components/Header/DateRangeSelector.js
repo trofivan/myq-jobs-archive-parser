@@ -2,7 +2,7 @@ import React from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
 
-export default ({ isDisabled, disabledDate, onChangeDateRange }) => (
+export default ({ isDisabled, onChangeDateRange }) => (
   <DatePicker.RangePicker
     disabled={isDisabled}
     onChange={onChangeDateRange}

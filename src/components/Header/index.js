@@ -6,37 +6,28 @@ import UsersSelector from '../../containers/Header/UsersSelector';
 import DateRangeSelector from '../../containers/Header/DateRangeSelector';
 import LocaleSelector from './LocaleSelector';
 
-const styleFlexContainer = {
-  display: 'flex',
-  width: '100%',
-  alignItems: 'center'
-};
-
-const FlexContainer = ({ children, style }) => (
-  <div style={{ ...styleFlexContainer, ...style }}>{children}</div>
-);
+import './index.css';
 
 export default () => (
-  <div style={{ width: '100%', padding: '16px 4.166666667%' }}>
-    <FlexContainer>
-      <div>
+  <div className="header">
+    <div className="header__col header__col--first">
+      <div className="header__row">
         <FolderChooser />
       </div>
-      <div style={{ flexGrow: 1, padding: '0 16px' }}>
+      <div className="header__row header__row--all-width header__row--padding-left header__row--padding-right">
         <DateRangeSelector />
       </div>
-      <div>
+      <div className="header__row">
         <LocaleSelector />
       </div>
-    </FlexContainer>
-
-    <FlexContainer style={{ paddingTop: 16 }}>
-      <div>
+    </div>
+    <div className="header__col">
+      <div className="header__row">
         <JobsTypeSelector />
       </div>
-      <div style={{ flexGrow: 1, paddingLeft: 16 }}>
+      <div className="header__row header__row--all-width header__row--padding-left">
         <UsersSelector />
       </div>
-    </FlexContainer>
+    </div>
   </div>
 );

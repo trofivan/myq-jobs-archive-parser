@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  padding: 16px 4.166666667%;
+}
+
+.header__col {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.header__col--first {
+  padding-top: 0;
+}
+
+.header__row {
+  display: block;
+}
+
+.header__row--all-width {
+  flex-grow: 1;
+}
+
+.header__row--padding-left {
+  padding-left: 16px;
+}
+
+.header__row--padding-right {
+  padding-right: 16px;
+}
