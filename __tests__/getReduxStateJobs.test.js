@@ -121,7 +121,7 @@ test('Getting *.xml jobs files array and convert it to the Redux state', async (
   expect(jobsWithoutErrorMessages).toEqual(result.withoutErrorMessages);
 
   const errorJobs = jobs.filter(job => job.error);
-  expect(errorJobs).toHaveLength(5)
+  expect(errorJobs).toHaveLength(5);
 });
 
 test('Getting *.xml jobs files array and convert it to the Redux state - empty folder', async () => {
