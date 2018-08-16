@@ -1,0 +1,34 @@
+{
+  "App.folderChooser.text": "Выберите директорию",
+
+  "App.filter.dateRange": {
+    "today": "Сегодня",
+    "thisWeek": "Эта неделя",
+    "thisMonth": "Этот месяц"
+  },
+  "App.filter.type": {
+    "print": "Печать",
+    "scan": "Скан",
+    "copy": "Копии"
+  },
+  "App.filter.users.placeholder": "Пользователи",
+
+  "App.content.tab": {
+    "jobs": "Задания",
+    "warnings": "Ошибки"
+  },
+
+  "App.content.jobsTable.col": {
+    "dateAndTime": "Дата и время",
+    "user": "Пользователь",
+    "type": "Тип",
+    "printerIp": "IP адрес принтера",
+    "files": "Файлы"
+  },
+  "App.content.jobsTable.data.webInterface": "Веб интерфейс",
+  "App.content.jobsTable.data.filterByUser": "Отфильтровать задания по пользователю",
+  "App.content.warningsTable.col": {
+    "xmlFile": "XML файл",
+    "errorMessage": "Ошибка"
+  }
+}

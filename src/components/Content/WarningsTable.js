@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
+import { FormattedMessage } from 'react-intl';
 
 const paginationConfig = {
   pageSize: 50,
@@ -8,10 +9,14 @@ const paginationConfig = {
 };
 
 const WarningsTable = ({ jobs }) => (
-  <Table dataSource={jobs} pagination={paginationConfig} size="middle">
-    <Table.Column title="XML file" dataIndex="xmlFile" key="xmlFile" />
-    <Table.Column title="Error message" dataIndex="error" key="error" />
-  </Table>
+  <FormattedMessage id="App.content.warningsTable.col">
+    {({ xmlFile, errorMessage }) => (
+      <Table dataSource={jobs} pagination={paginationConfig} size="middle">
+        <Table.Column title={xmlFile} dataIndex="xmlFile" key="xmlFile" />
+        <Table.Column title={errorMessage} dataIndex="error" key="error" />
+      </Table>
+    )}
+  </FormattedMessage>
 );
 
 export default WarningsTable;

@@ -3,9 +3,9 @@ import { Select } from 'antd';
 
 const { Option } = Select;
 
-export default () => (
-  <Select disabled defaultValue="English">
-    <Option value="English">English</Option>
-    <Option value="Russian">Русский</Option>
+export default ({ locale = 'en', handleChangeLocale }) => (
+  <Select onChange={handleChangeLocale} value={locale}>
+    <Option value="en">English</Option>
+    <Option value="ru">Русский</Option>
   </Select>
 );

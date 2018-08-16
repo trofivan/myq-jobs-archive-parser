@@ -1,20 +1,16 @@
 import React from 'react';
 import { Button } from 'antd';
 import { homedir as getHomeDir } from 'os';
+import { FormattedMessage } from 'react-intl';
 
 const chooseFolderRef = React.createRef();
 
-const handlerClick = () => {
+const handleClick = () => {
   chooseFolderRef.current.click();
 };
 
-const getTextSelectFolder = () => 'Select folder to parse';
-
 const sliceString = (str, tailLength = 20) =>
   str.length > tailLength ? `...${str.slice(-tailLength)}` : str;
-
-const getButtonText = jobsFolder =>
-  jobsFolder === '' ? getTextSelectFolder() : sliceString(jobsFolder);
 
 export default ({
   isFetchingJobs,
@@ -24,15 +20,19 @@ export default ({
 }) => (
   <div>
     <Button.Group>
-      <Button
-        type="primary"
-        onClick={handlerClick}
-        title={jobsFolder === '' ? getTextSelectFolder() : jobsFolder}
-        loading={isFetchingJobs}
-        icon="file-add"
-      >
-        {getButtonText(jobsFolder)}
-      </Button>
+      <FormattedMessage id="App.folderChooser.text">
+        {selectFolderText => (
+          <Button
+            type="primary"
+            onClick={handleClick}
+            title={jobsFolder === '' ? selectFolderText : jobsFolder}
+            loading={isFetchingJobs}
+            icon="file-add"
+          >
+            {jobsFolder === '' ? selectFolderText : sliceString(jobsFolder)}
+          </Button>
+        )}
+      </FormattedMessage>
       {isFetchingJobs ? (
         <Button type="danger" onClick={onCancelJobsFetching} icon="close" />
       ) : (

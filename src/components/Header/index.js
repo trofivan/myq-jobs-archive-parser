@@ -4,7 +4,7 @@ import FolderChooser from '../../containers/Header/FolderChooser';
 import JobsTypeSelector from '../../containers/Header/JobsTypeSelector';
 import UsersSelector from '../../containers/Header/UsersSelector';
 import DateRangeSelector from '../../containers/Header/DateRangeSelector';
-import LocaleSelector from './LocaleSelector';
+import LocaleSelector from '../../containers/Header/LocaleSelector';
 
 import './index.css';
 

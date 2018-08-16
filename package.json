@@ -60,6 +60,7 @@
     "graceful-fs": "^4.1.11",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-intl": "^2.4.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "xml2js": "^0.4.19"

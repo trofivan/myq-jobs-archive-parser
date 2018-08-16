@@ -1,25 +1,33 @@
-// Set jobs folder
 import actionSetJobsFolder from './setJobsFolder';
-export const setJobsFolder = actionSetJobsFolder;
 
-// Fetch jobs
+import actionSetLocale from './setLocale';
+
 import {
   fetchJobsRequest as actionFetchJobsRequest,
   fetchJobsSuccess as actionFetchJobsSuccess,
   fetchJobsCancel as actionJobsCancel,
   fetchJobsError as actionJobsError
 } from './fetchJobs';
+
+import {
+  setJobsType as actionSetJobsType,
+  setUsers as actionSetUsers,
+  setDateRange as actionSetDateRange
+} from './jobsFilter';
+
+// Set jobs folder
+export const setJobsFolder = actionSetJobsFolder;
+
+// Set locale
+export const setLocale = actionSetLocale;
+
+// Fetch jobs
 export const fetchJobsRequest = actionFetchJobsRequest;
 export const fetchJobsSuccess = actionFetchJobsSuccess;
 export const fetchJobsCancel = actionJobsCancel;
 export const fetchJobsError = actionJobsError;
 
 // Filters
-import {
-  setJobsType as actionSetJobsType,
-  setUsers as actionSetUsers,
-  setDateRange as actionSetDateRange
-} from './jobsFilter';
 export const setJobsType = actionSetJobsType;
 export const setUsers = actionSetUsers;
 export const setDateRange = actionSetDateRange;

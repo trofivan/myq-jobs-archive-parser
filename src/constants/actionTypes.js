@@ -1,4 +1,5 @@
 export const SET_JOBS_FOLDER = 'SET_JOBS_FOLDER';
+export const SET_LOCALE = 'SET_LOCALE';
 
 export const FETCH_JOBS_REQUEST = 'FETCH_JOBS_REQUEST';
 export const FETCH_JOBS_SUCCESS = 'FETCH_JOBS_SUCCESS';

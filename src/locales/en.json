@@ -1,0 +1,34 @@
+{
+  "App.folderChooser.text": "Select folder to parse",
+
+  "App.filter.dateRange": {
+    "today": "Today",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month"
+  },
+  "App.filter.type": {
+    "print": "Print",
+    "scan": "Scan",
+    "copy": "Copy"
+  },
+  "App.filter.users.placeholder": "Users",
+
+  "App.content.tab": {
+    "jobs": "Jobs",
+    "warnings": "Warnings"
+  },
+
+  "App.content.jobsTable.col": {
+    "dateAndTime": "Date and time",
+    "user": "User",
+    "type": "Type",
+    "printerIp": "Printer IP address",
+    "files": "Files"
+  },
+  "App.content.jobsTable.data.webInterface": "Web interface",
+  "App.content.jobsTable.data.filterByUser": "Filter jobs by user",
+  "App.content.warningsTable.col": {
+    "xmlFile": "XML file",
+    "errorMessage": "Error message"
+  }
+}

@@ -15,7 +15,7 @@ export default () => (
     <Col span={11} style={{ textAlign: 'right' }}>
       Copyright &copy; 2018 Ivan Trofimov<br />
       <a
-        href="#"
+        href="#License"
         onClick={e => {
           e.preventDefault();
           nw.Shell.openExternal(
@@ -28,7 +28,7 @@ export default () => (
       <br />
       <Icon type="github" />{' '}
       <a
-        href="#"
+        href="#GitHub"
         onClick={e => {
           e.preventDefault();
           nw.Shell.openExternal(
