@@ -17,7 +17,6 @@
     "jobs": "Задания",
     "warnings": "Ошибки"
   },
-
   "App.content.jobsTable.col": {
     "dateAndTime": "Дата и время",
     "user": "Пользователь",
@@ -26,6 +25,9 @@
     "files": "Файлы"
   },
   "App.content.jobsTable.data.webInterface": "Веб интерфейс",
+  "App.content.jobsTable.data.type.print": "Печать",
+  "App.content.jobsTable.data.type.scan": "Сканирование",
+  "App.content.jobsTable.data.type.copy": "Копия",
   "App.content.jobsTable.data.filterByUser": "Отфильтровать задания по пользователю",
   "App.content.warningsTable.col": {
     "xmlFile": "XML файл",

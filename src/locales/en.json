@@ -12,12 +12,10 @@
     "copy": "Copy"
   },
   "App.filter.users.placeholder": "Users",
-
   "App.content.tab": {
     "jobs": "Jobs",
     "warnings": "Warnings"
   },
-
   "App.content.jobsTable.col": {
     "dateAndTime": "Date and time",
     "user": "User",
@@ -26,6 +24,9 @@
     "files": "Files"
   },
   "App.content.jobsTable.data.webInterface": "Web interface",
+  "App.content.jobsTable.data.type.print": "Print",
+  "App.content.jobsTable.data.type.scan": "Scan",
+  "App.content.jobsTable.data.type.copy": "Copy",
   "App.content.jobsTable.data.filterByUser": "Filter jobs by user",
   "App.content.warningsTable.col": {
     "xmlFile": "XML file",
