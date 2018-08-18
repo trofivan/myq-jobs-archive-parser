@@ -1,35 +1,24 @@
 {
   "App.folderChooser.text": "Select folder to parse",
-
-  "App.filter.dateRange": {
-    "today": "Today",
-    "thisWeek": "This Week",
-    "thisMonth": "This Month"
-  },
-  "App.filter.type": {
-    "print": "Print",
-    "scan": "Scan",
-    "copy": "Copy"
-  },
+  "App.filter.dateRange.today": "Today",
+  "App.filter.dateRange.thisWeek": "This Week",
+  "App.filter.dateRange.thisMonth": "This Month",
+  "App.filter.type.print": "Print",
+  "App.filter.type.scan": "Scan",
+  "App.filter.type.copy": "Copy",
   "App.filter.users.placeholder": "Users",
-  "App.content.tab": {
-    "jobs": "Jobs",
-    "warnings": "Warnings"
-  },
-  "App.content.jobsTable.col": {
-    "dateAndTime": "Date and time",
-    "user": "User",
-    "type": "Type",
-    "printerIp": "Printer IP address",
-    "files": "Files"
-  },
+  "App.content.tab.jobs": "Jobs",
+  "App.content.tab.warnings": "Warnings",
+  "App.content.jobsTable.col.dateAndTime": "Date and time",
+  "App.content.jobsTable.col.user": "User",
+  "App.content.jobsTable.col.type": "Type",
+  "App.content.jobsTable.col.printerIp": "Printer IP address",
+  "App.content.jobsTable.col.files": "Files",
   "App.content.jobsTable.data.webInterface": "Web interface",
   "App.content.jobsTable.data.type.print": "Print",
   "App.content.jobsTable.data.type.scan": "Scan",
   "App.content.jobsTable.data.type.copy": "Copy",
   "App.content.jobsTable.data.filterByUser": "Filter jobs by user",
-  "App.content.warningsTable.col": {
-    "xmlFile": "XML file",
-    "errorMessage": "Error message"
-  }
+  "App.content.warningsTable.col.xmlFile": "XML file",
+  "App.content.warningsTable.col.errorMessage": "Error message"
 }

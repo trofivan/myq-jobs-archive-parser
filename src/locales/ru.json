@@ -1,36 +1,24 @@
 {
   "App.folderChooser.text": "Выберите директорию",
-
-  "App.filter.dateRange": {
-    "today": "Сегодня",
-    "thisWeek": "Эта неделя",
-    "thisMonth": "Этот месяц"
-  },
-  "App.filter.type": {
-    "print": "Печать",
-    "scan": "Скан",
-    "copy": "Копии"
-  },
+  "App.filter.dateRange.today": "Сегодня",
+  "App.filter.dateRange.thisWeek": "Эта неделя",
+  "App.filter.dateRange.thisMonth": "Этот месяц",
+  "App.filter.type.print": "Печать",
+  "App.filter.type.scan": "Скан",
+  "App.filter.type.copy": "Копии",
   "App.filter.users.placeholder": "Пользователи",
-
-  "App.content.tab": {
-    "jobs": "Задания",
-    "warnings": "Ошибки"
-  },
-  "App.content.jobsTable.col": {
-    "dateAndTime": "Дата и время",
-    "user": "Пользователь",
-    "type": "Тип",
-    "printerIp": "IP адрес принтера",
-    "files": "Файлы"
-  },
+  "App.content.tab.jobs": "Задания",
+  "App.content.tab.warnings": "Ошибки",
+  "App.content.jobsTable.col.dateAndTime": "Дата и время",
+  "App.content.jobsTable.col.user": "Пользователь",
+  "App.content.jobsTable.col.type": "Тип",
+  "App.content.jobsTable.col.printerIp": "IP адрес принтера",
+  "App.content.jobsTable.col.files": "Файлы",
   "App.content.jobsTable.data.webInterface": "Веб интерфейс",
   "App.content.jobsTable.data.type.print": "Печать",
   "App.content.jobsTable.data.type.scan": "Сканирование",
   "App.content.jobsTable.data.type.copy": "Копия",
   "App.content.jobsTable.data.filterByUser": "Отфильтровать задания по пользователю",
-  "App.content.warningsTable.col": {
-    "xmlFile": "XML файл",
-    "errorMessage": "Ошибка"
-  }
+  "App.content.warningsTable.col.xmlFile": "XML файл",
+  "App.content.warningsTable.col.errorMessage": "Ошибка"
 }

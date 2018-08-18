@@ -1,20 +1,27 @@
 import React from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
-export default ({ isDisabled, onChangeDateRange }) => (
-  <FormattedMessage id="App.filter.dateRange">
-    {({ today, thisWeek, thisMonth }) => (
-      <DatePicker.RangePicker
-        disabled={isDisabled}
-        onChange={onChangeDateRange}
-        ranges={{
-          [today]: [moment().startOf('day'), moment().endOf('day')],
-          [thisWeek]: [moment().startOf('week'), moment().endOf('week')],
-          [thisMonth]: [moment().startOf('month'), moment().endOf('month')]
-        }}
-      />
-    )}
-  </FormattedMessage>
+const DateRangeSelector = ({ isDisabled, onChangeDateRange, intl }) => (
+  <DatePicker.RangePicker
+    disabled={isDisabled}
+    onChange={onChangeDateRange}
+    ranges={{
+      [intl.formatMessage({ id: 'App.filter.dateRange.today' })]: [
+        moment().startOf('day'),
+        moment().endOf('day')
+      ],
+      [intl.formatMessage({ id: 'App.filter.dateRange.thisWeek' })]: [
+        moment().startOf('week'),
+        moment().endOf('week')
+      ],
+      [intl.formatMessage({ id: 'App.filter.dateRange.thisMonth' })]: [
+        moment().startOf('month'),
+        moment().endOf('month')
+      ]
+    }}
+  />
 );
+
+export default injectIntl(DateRangeSelector);

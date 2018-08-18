@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
 import RenderFilesColumn from './RenderFilesColumn';
 import RenderIpAddrColumn from './RenderIpAddrColumn';
@@ -14,43 +14,49 @@ const paginationConfig = {
   showSizeChanger: true
 };
 
-const JobsTable = ({ jobs, onClickUserFilter }) => (
-  <FormattedMessage id="App.content.jobsTable.col">
-    {({ dateAndTime, user, type, printerIp, files }) => (
-      <Table dataSource={jobs} pagination={paginationConfig} size="middle">
-        <Table.Column
-          title={dateAndTime}
-          dataIndex="timestamp"
-          key="timestamp"
-          render={RenderTimestampColumn}
-        />
-        <Table.Column
-          title={user}
-          dataIndex="username"
-          key="username"
-          render={RenderUserColumn(onClickUserFilter)}
-        />
-        <Table.Column
-          title={type}
-          dataIndex="jobType"
-          key="jobType"
-          render={RenderJobTypeColumn}
-        />
-        <Table.Column
-          title={printerIp}
-          dataIndex="printerAddr"
-          key="printerAddr"
-          render={RenderIpAddrColumn}
-        />
-        <Table.Column
-          title={files}
-          dataIndex="files"
-          key="files"
-          render={RenderFilesColumn}
-        />
-      </Table>
-    )}
-  </FormattedMessage>
+const JobsTable = ({ jobs, onClickUserFilter, intl }) => (
+  <Table dataSource={jobs} pagination={paginationConfig} size="middle">
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.jobsTable.col.dateAndTime'
+      })}
+      dataIndex="timestamp"
+      key="timestamp"
+      render={RenderTimestampColumn}
+    />
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.jobsTable.col.user'
+      })}
+      dataIndex="username"
+      key="username"
+      render={RenderUserColumn(onClickUserFilter)}
+    />
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.jobsTable.col.type'
+      })}
+      dataIndex="jobType"
+      key="jobType"
+      render={RenderJobTypeColumn}
+    />
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.jobsTable.col.printerIp'
+      })}
+      dataIndex="printerAddr"
+      key="printerAddr"
+      render={RenderIpAddrColumn}
+    />
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.jobsTable.col.files'
+      })}
+      dataIndex="files"
+      key="files"
+      render={RenderFilesColumn}
+    />
+  </Table>
 );
 
-export default JobsTable;
+export default injectIntl(JobsTable);

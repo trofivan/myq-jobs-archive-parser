@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
 const paginationConfig = {
   pageSize: 50,
@@ -8,15 +8,23 @@ const paginationConfig = {
   showSizeChanger: true
 };
 
-const WarningsTable = ({ jobs }) => (
-  <FormattedMessage id="App.content.warningsTable.col">
-    {({ xmlFile, errorMessage }) => (
-      <Table dataSource={jobs} pagination={paginationConfig} size="middle">
-        <Table.Column title={xmlFile} dataIndex="xmlFile" key="xmlFile" />
-        <Table.Column title={errorMessage} dataIndex="error" key="error" />
-      </Table>
-    )}
-  </FormattedMessage>
+const WarningsTable = ({ jobs, intl }) => (
+  <Table dataSource={jobs} pagination={paginationConfig} size="middle">
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.warningsTable.col.xmlFile'
+      })}
+      dataIndex="xmlFile"
+      key="xmlFile"
+    />
+    <Table.Column
+      title={intl.formatMessage({
+        id: 'App.content.warningsTable.col.errorMessage'
+      })}
+      dataIndex="error"
+      key="error"
+    />
+  </Table>
 );
 
-export default WarningsTable;
+export default injectIntl(WarningsTable);
