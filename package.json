@@ -33,10 +33,11 @@
     "testURL": "http://localhost/"
   },
   "scripts": {
-    "start": "npm run build.dev && run -- . --load-extension=./devtools/react-devtools,./devtools/redux-devtools --remote-debugging-port=9222",
-    "build.dev": "webpack --mode=development",
-    "build.prod": "webpack --mode=production",
-    "build.dist": "rimraf ./dist && npm run build.prod && build --tasks win-x64,linux-x64,mac-x64 --concurrent .",
+    "start": "npm run build:dev && run -- . --load-extension=./devtools/react-devtools,./devtools/redux-devtools --remote-debugging-port=9222 && watch",
+    "watch": "webpack --watch --info-verbosity verbose --progress --mode=development",
+    "build:dev": "webpack --progress --mode=development",
+    "build:prod": "webpack --progress --mode=production",
+    "build:dist": "rimraf ./dist && npm run build:prod && build --tasks win-x64,linux-x64,mac-x64 --concurrent .",
     "test": "jest"
   },
   "repository": {
@@ -63,6 +64,7 @@
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {

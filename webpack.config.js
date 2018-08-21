@@ -21,6 +21,9 @@ module.exports = {
       exclude: ['index.html', '.keep', 'assets']
     })
   ],
+  watchOptions: {
+    ignored: ['build', 'devtools', 'dist', 'node_modules']
+  },
   module: {
     rules: [
       {
