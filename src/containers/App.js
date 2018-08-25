@@ -1,35 +1,12 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import App from '../components/App';
 
-import antdEn from 'antd/lib/locale-provider/en_US';
-import antdRu from 'antd/lib/locale-provider/ru_RU';
+import AppComponent from '../components/App';
 
-import appEnMessages from '../locales/en';
-import appRuMessages from '../locales/ru';
-
-const antdLocales = {
-  en: antdEn,
-  ru: antdRu
-};
-
-const appLocales = {
-  en: {
-    locale: 'en',
-    messages: {
-      ...appEnMessages
-    }
-  },
-  ru: {
-    locale: 'ru',
-    messages: {
-      ...appRuMessages
-    }
+class AppContainer extends Component {
+  render() {
+    return <AppComponent />;
   }
-};
+}
 
-const mapStateToProps = ({ locale }) => ({
-  antdLocale: antdLocales[locale],
-  appLocale: appLocales[locale]
-});
-
-export default connect(mapStateToProps)(App);
+export default connect()(AppContainer);

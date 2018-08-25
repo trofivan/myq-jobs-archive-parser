@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
-import App from './containers/App';
+import IntlApp from './containers/IntlApp';
 import fetchJobs from './middlewares/fetchJobs';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -15,7 +15,7 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <App />
+    <IntlApp />
   </Provider>,
   document.getElementById('root')
 );
