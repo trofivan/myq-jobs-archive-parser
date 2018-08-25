@@ -58,6 +58,7 @@
   "homepage": "https://github.com/trofivan/myq-jobs-archive-parser#readme",
   "dependencies": {
     "antd": "^3.5.2",
+    "axios": "^0.18.0",
     "graceful-fs": "^4.1.11",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
