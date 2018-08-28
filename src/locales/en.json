@@ -1,4 +1,9 @@
 {
+  "App.message.newVersion.title": "New version is available",
+  "App.message.newVersion.text": "You are using version {current}. Version {latest} is available for download.",
+  "App.message.newVersion.download": "Download",
+  "App.message.newVersionFetchingError.title": "Error checking for new version",
+  "App.message.newVersionFetchingError.text": "We could not verify the new version of the program. Please check the connection to the Internet.",
   "App.folderChooser.text": "Select folder to parse",
   "App.filter.dateRange.today": "Today",
   "App.filter.dateRange.thisWeek": "This Week",

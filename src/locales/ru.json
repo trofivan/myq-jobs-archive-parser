@@ -1,4 +1,9 @@
 {
+  "App.message.newVersion.title": "Доступна новая версия",
+  "App.message.newVersion.text": "Вы используете версию {current}. Версия {latest} доступна для скачивания.",
+  "App.message.newVersion.download": "Скачать",
+  "App.message.newVersionFetchingError.title": "Ошибка проверки новой версии",
+  "App.message.newVersionFetchingError.text": "Не удалось проверить новую версию программы. Пожалуйста проверьте соединение с Интернетом.",
   "App.folderChooser.text": "Выберите директорию",
   "App.filter.dateRange.today": "Сегодня",
   "App.filter.dateRange.thisWeek": "Эта неделя",
