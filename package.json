@@ -1,6 +1,6 @@
 {
   "name": "myq-jobs-archive-parser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MyQ Jobs archive parser for Windows, Linux and Mac OS X",
   "private": true,
   "main": "build/index.html",
