@@ -20,7 +20,7 @@ const fetchLatestVersionError = error => ({
   error
 });
 
-const fetchLatestVersion = () => async dispatch => {
+export const fetchLatestVersion = () => async dispatch => {
   dispatch(fetchLatestVersionRequest());
 
   try {
@@ -32,5 +32,3 @@ const fetchLatestVersion = () => async dispatch => {
     return dispatch(fetchLatestVersionError(true));
   }
 };
-
-export default fetchLatestVersion;

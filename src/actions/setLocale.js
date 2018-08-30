@@ -1,6 +1,6 @@
 import { SET_LOCALE } from '../constants/actionTypes';
 
-export default locale => ({
+export const setLocale = locale => ({
   type: SET_LOCALE,
   locale
 });

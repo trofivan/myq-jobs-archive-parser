@@ -1,6 +1,6 @@
 import { SET_JOBS_FOLDER } from '../constants/actionTypes';
 
-export default jobsFolder => ({
+export const setJobsFolder = jobsFolder => ({
   type: SET_JOBS_FOLDER,
   jobsFolder
 });
