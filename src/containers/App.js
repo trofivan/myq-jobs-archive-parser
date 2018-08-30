@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { notification, Button, Icon } from 'antd';
 import { injectIntl } from 'react-intl';
 import { URL_LATEST_RELEASE } from '../constants/externalURLs';
-import fetchLatestVersion from '../actions/fetchLatestVersion';
+import { fetchLatestVersion } from '../actions';
 import AppComponent from '../components/App';
 
 class AppContainer extends Component {

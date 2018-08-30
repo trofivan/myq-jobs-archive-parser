@@ -15,7 +15,7 @@ import {
   setDateRange as actionSetDateRange
 } from './jobsFilter';
 
-//import { fetchLatestVersion as actionFetchLatestVersion } from './fetchLatestVersion';
+import actionFetchLatestVersion from './fetchLatestVersion';
 
 // Set jobs folder
 export const setJobsFolder = actionSetJobsFolder;
@@ -35,4 +35,4 @@ export const setUsers = actionSetUsers;
 export const setDateRange = actionSetDateRange;
 
 // Latest version
-//export const fetchLatestVersion = actionFetchLatestVersion;
+export const fetchLatestVersion = actionFetchLatestVersion;
