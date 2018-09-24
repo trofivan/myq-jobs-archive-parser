@@ -66,3 +66,6 @@ transpiled/*
 
 build/*.js
 dist/
+
+# IDE
+.idea/
